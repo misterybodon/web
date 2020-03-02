@@ -1,0 +1,60 @@
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header > * {
+  position: absolute;
+}
+
+svg > line {
+  stroke: black;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.navbar {
+  top: 0;
+  right: 0;
+}
+.hamburger {
+  position: absolute;
+  z-index: 5;
+  right: 5px;
+  top: 5px;
+}
+.hamburger:hover {
+  cursor: pointer;
+}
+.navbar__ul {
+  display: grid;
+  place-items: center;
+  padding-top: 48px;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background-color: rgba(135, 116, 78);
+  transition: width 0.5s ease-out;
+}
+.trigger__navbar {
+  width: 100vw;
+}
+
+header img {
+  z-index: -1;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+header h1 {
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  left: 50%;
+}

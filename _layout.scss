@@ -1,0 +1,37 @@
+$smallspace: 20px;
+$mediumspace: 50px;
+body {
+  display: grid;
+  grid-template-columns: repeat(2, $smallspace) 1fr repeat(2, $smallspace);
+  row-gap: $mediumspace;
+  grid-template-areas:
+    "header header header header header"
+    ". . welcome . ."
+    ". article article article ."
+    ". . card . ."
+    " . . newposts . ."
+    ". . backToTop . ."
+    " footer footer footer footer footer";
+}
+header {
+  grid-area: header;
+}
+.welcome {
+  grid-area: welcome;
+}
+.article {
+  grid-area: article;
+}
+.card {
+  grid-area: card;
+}
+.newposts {
+  grid-area: newposts;
+}
+.backToTopNav {
+  //it's just a button
+  grid-area: backToTop;
+}
+.footer {
+  grid-area: footer;
+}

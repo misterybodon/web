@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header > * {
+  position: absolute;
+}
+
+svg > line {
+  stroke: black;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.navbar {
+  top: 0;
+  right: 0;
+}
+
+.hamburger {
+  position: absolute;
+  z-index: 5;
+  right: 5px;
+  top: 5px;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.navbar__ul {
+  display: grid;
+  place-items: center;
+  padding-top: 48px;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  background-color: #87744e;
+  transition: width 0.5s ease-out;
+}
+
+.trigger__navbar {
+  width: 100vw;
+}
+
+header img {
+  z-index: -1;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+header h1 {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(2, 20px) 1fr repeat(2, 20px);
+  row-gap: 50px;
+  grid-template-areas: "header header header header header" ". . welcome . ." ". article article article ." ". . card . ." " . . newposts . ." ". . backToTop . ." " footer footer footer footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+.welcome {
+  grid-area: welcome;
+}
+
+.article {
+  grid-area: article;
+}
+
+.card {
+  grid-area: card;
+}
+
+.newposts {
+  grid-area: newposts;
+}
+
+.backToTopNav {
+  grid-area: backToTop;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  background-color: white;
+  font-family: "Balthazar", serif;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+p {
+  margin-bottom: 1.15rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: "Sancreek", sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.802rem;
+}
+
+h2 {
+  font-size: 1.602rem;
+}
+
+h3 {
+  font-size: 1.424rem;
+}
+
+h4 {
+  font-size: 1.266rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+small,
+.text_small {
+  font-size: 0.889rem;
+}
+
+h2 {
+  background: #008080;
+  width: 230px;
+  margin-left: 40px;
+  padding: 10px;
+  text-align: right;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: matrix(1, 0, 0.03, 1, 0, 0);
+}
+
+p {
+  text-align: right;
+}
+
+article p {
+  text-align: justify;
+}
+
+body {
+  text-align: center;
+  background-color: #444;
+  color: white;
+}
+
+.card img {
+  width: 50%;
+}
+
+.socialMedia__ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.socialMedia__ul img {
+  width: 24px;
+  height: 24px;
+}
+
+/*# sourceMappingURL=index.css.map */
