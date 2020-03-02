@@ -1,8 +1,9 @@
 @use 'resets';
 @use 'header';
-@use 'layout';
+@use 'pageLayout';
 @use 'fonts';
 @use 'variables';
+@use 'footer';
 
 body {
   text-align: center;
@@ -13,16 +14,3 @@ body {
   width: 50%;
 }
 
-img.socialLogo {
-  width: variables.$squareLogo;
-  height: variables.$squareLogo;
-}
-.twitter:hover {
-  text-decoration: underline;
-  color: black;
-}
-
-.footer {
-  background-color: variables.$footerBackground;
-  color: variables.$theDark;
-}

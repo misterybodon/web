@@ -1,38 +1,50 @@
+@use 'resets';
+@use 'variables';
 header {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  > * {
+    position: absolute;
+  }
+  .navbar {
+    top: 0;
+    right: 0;
+  }
+  &__showcaseimg {
+    //display set to block in _resets
+    object-fit: cover;
+    min-width: 200px;
+    min-height: 300px;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  h1 {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    left: 50%;
+  }
 }
 
-header > * {
-  position: absolute;
-}
-
-svg > line {
-  stroke: black;
-  stroke-width: 4;
-  stroke-linecap: round;
-}
-
-.navbar {
-  top: 0;
-  right: 0;
-}
 .hamburger {
+  //onclick it should rotate to a cross on click
   position: absolute;
-  z-index: 5;
-  right: 5px;
-  top: 5px;
+  z-index: 999;
+  right: 1rem;
+  top: 0.5rem;
+  &:hover {
+    cursor: pointer;
+  }
 }
-.hamburger:hover {
-  cursor: pointer;
-}
+
 .navbar__ul {
   display: grid;
   place-items: center;
   padding-top: 48px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   right: 0;
   width: 0;
@@ -42,19 +54,4 @@ svg > line {
 }
 .trigger__navbar {
   width: 100vw;
-}
-
-header img {
-  z-index: -1;
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  display: block;
-}
-
-header h1 {
-  top: 50%;
-  transform: translate(-50%,-50%);
-  z-index: -1;
-  left: 50%;
 }
