@@ -1,9 +1,9 @@
-$smallspace: 20px;
-$mediumspace: 50px;
+@use 'variables';
+
 body {
   display: grid;
-  grid-template-columns: repeat(2, $smallspace) 1fr repeat(2, $smallspace);
-  row-gap: $mediumspace;
+  grid-template-columns: repeat(2, variables.$smallspace) 1fr repeat(2, variables.$smallspace);
+  row-gap: variables.$mediumspace;
   grid-template-areas:
     "header header header header header"
     ". . welcome . ."
@@ -11,6 +11,7 @@ body {
     ". . card . ."
     " . . newposts . ."
     ". . backToTop . ."
+    //I would do ". . footer . ." but see below on footer
     " footer footer footer footer footer";
 }
 header {
@@ -34,4 +35,22 @@ header {
 }
 .footer {
   grid-area: footer;
+}
+
+.footer {
+  display: grid;
+  align-items: center;
+  padding: variables.$smallspace_footer 0;
+  grid-template-columns:
+    repeat(2, variables.$smallspace) minmax(min-content, 1fr)
+    repeat(2, variables.$smallspace);
+  row-gap: variables.$smallspace_footer;
+  &__copyright {
+    text-align: right;
+    grid-column: 2 / -2;
+  }
+  &__social {
+    @include variables.flexcenter(row, center, space-between);
+    grid-column: 2 / -2;
+  }
 }

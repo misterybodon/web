@@ -2,22 +2,27 @@
 @use 'header';
 @use 'layout';
 @use 'fonts';
+@use 'variables';
 
 body {
   text-align: center;
-  background-color: #444;
+  background-color: variables.$theDark;
   color: white;
 }
 .card img {
   width: 50%;
 }
-.socialMedia__ul {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  img {
-    width: 24px;
-    height: 24px;
-  }
+
+img.socialLogo {
+  width: variables.$squareLogo;
+  height: variables.$squareLogo;
+}
+.twitter:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.footer {
+  background-color: variables.$footerBackground;
+  color: variables.$theDark;
 }

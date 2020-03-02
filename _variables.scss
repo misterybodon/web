@@ -1,0 +1,24 @@
+@mixin flexcenter($direction, $align: center, $justify: center) {
+  display: flex;
+  flex-flow: $direction wrap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+//SPACING
+
+$smallspace: 1rem;
+$mediumspace: 3.1rem;
+$squareLogo: 1.2rem;
+$smallspace_footer: 1rem;
+
+// COLORS
+
+$footerBackground: #d5cccc;
+//thedark used in background color and footer text color
+$theDark: #444;
+//USED ON SVGs
+$twitter: "#1da1f2";
+$facebook: "#4267b2";
+$instagram: #e94752;
+$github: #000;
