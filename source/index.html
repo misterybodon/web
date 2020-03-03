@@ -34,9 +34,9 @@ chemistry, maths, literature." />
       </ul>
     </nav>
 
+    <h1 class='showcase__h1'>The ramblings of Mr. Nobody</h1>
     <img class="header__showcaseimg" src="images/umbrella.jpg"
       alt="Mr nobody methaphorically picturing his shadow, which is projected on the road. There is the shadow of an umbrella he's wearing too." />
-    <h1 class='showcase__h1'>The ramblings of Mr. Nobody</h1>
   </header>
 
   <section class='welcome' title='welcome paragraph, a brief summary'>
@@ -126,15 +126,7 @@ chemistry, maths, literature." />
       &copy; 2019 Mister Nobody.
     </div>
   </footer>
-  <script>
-    function clickBurger() {
-      const navBar = document.getElementById('navbar__ul');
-      navBar.classList.toggle("trigger__navbar");
-      const lines = document.getElementById('hamburger').children;
-      lines[0].classList.toggle('hamburger__line1');
-      lines[1].classList.toggle('hamburger__line2');
-      lines[2].classList.toggle('hamburger__line3');
-    }
+  <script src='js/burger.js'>
   </script>
 </body>
 
