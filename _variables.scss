@@ -1,4 +1,4 @@
-@mixin flexcenter($direction, $align: center, $justify: center) {
+@mixin flexcenter($direction:row, $align: center, $justify: center) {
   display: flex;
   flex-flow: $direction wrap;
   align-items: $align;
@@ -18,6 +18,8 @@ $mediumspaceFooter: 2rem;
 $footerBackground: #d5cccc;
 //thedark used in background color and footer text color
 $theDark: #444;
+
+$theBrown:rgba(135, 116, 78);
 //USED ON SVGs
 $twitter: "#1da1f2";
 $facebook: "#4267b2";

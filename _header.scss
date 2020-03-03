@@ -1,9 +1,20 @@
 @use 'resets';
 @use 'variables';
-header {
+
+.header {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+  }
+  //otherwise the image overflows.
   > * {
     position: absolute;
   }
@@ -16,26 +27,47 @@ header {
     object-fit: cover;
     min-width: 200px;
     min-height: 300px;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
   }
 
   h1 {
     top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
     left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
 }
-
 .hamburger {
-  //onclick it should rotate to a cross on click
   position: absolute;
   z-index: 999;
+  top: 1rem;
   right: 1rem;
-  top: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  @include variables.flexcenter(column, stretch, space-around);
+  justify-content: space-evenly;
+  > * {
+    height: 4px;
+    border-radius: 5px;
+    background-color: white;
+    transition: 0.3s transform cubic-bezier(0.01, 0.62, 0.63, 0.79);
+    //bezier generated using firefox dev tools
+  }
   &:hover {
     cursor: pointer;
+    //when an object is rotated, the axis rotate with it,
+    //they don't get fixed to the initial position.
+    //so x and y are pointing to the corners of the container.
+  }
+  &__line1 {
+    transform: rotateZ(225deg) translate(-5px, -5px);
+  }
+  &__line2 {
+    display: none;
+  }
+  &__line3 {
+    transform: rotateZ(-225deg) translate(-5px, 5px);
   }
 }
 
@@ -43,15 +75,17 @@ header {
   display: grid;
   place-items: center;
   padding-top: 48px;
+  //overflow:hidden; holds the links off.
   overflow: hidden;
   z-index: 3;
   top: 0;
   right: 0;
   width: 0;
   height: 100vh;
-  background-color: rgba(135, 116, 78);
+  background-color: variables.$theBrown;
   transition: width 0.5s ease-out;
 }
+//this class is added to navbar using js. It switches smoothly from width:0; to width:100vw;
 .trigger__navbar {
   width: 100vw;
 }
