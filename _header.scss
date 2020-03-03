@@ -21,6 +21,7 @@
   .navbar {
     top: 0;
     right: 0;
+    display: grid;
   }
   &__showcaseimg {
     //display set to block in _resets
@@ -41,14 +42,14 @@
 .hamburger {
   position: absolute;
   z-index: 999;
-  top: 1rem;
-  right: 1rem;
-  height: 2rem;
-  width: 2rem;
+  top: variables.$hamburgerMargin;
+  right: variables.$hamburgerMargin;
+  height: variables.$hamburgerSize;
+  width: variables.$hamburgerSize;
   @include variables.flexcenter(column, stretch, space-around);
   justify-content: space-evenly;
   > * {
-    height: 4px;
+    height: variables.$hamburgerLineHeight;
     border-radius: 5px;
     background-color: white;
     transition: 0.3s transform cubic-bezier(0.01, 0.62, 0.63, 0.79);
@@ -72,18 +73,18 @@
 }
 
 .navbar__ul {
+  position: absolute;
   display: grid;
-  place-items: center;
-  padding-top: 48px;
-  //overflow:hidden; holds the links off.
-  overflow: hidden;
-  z-index: 3;
-  top: 0;
   right: 0;
   width: 0;
   height: 100vh;
-  background-color: variables.$theBrown;
+  top: 0;
+  place-items: center;
+  z-index: 10;
+  padding-top: 3rem;
+  overflow: hidden;
   transition: width 0.5s ease-out;
+  background-color: #87744e;
 }
 //this class is added to navbar using js. It switches smoothly from width:0; to width:100vw;
 .trigger__navbar {
