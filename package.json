@@ -1,0 +1,44 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "Index for the project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santimirandarp/mrnobody.git"
+  },
+  "keywords": [
+    "simple",
+    "website",
+    "grids",
+    "flexbox",
+    "responsive",
+    "sass",
+    "gulp",
+    "workflow."
+  ],
+  "author": "Santiago Miranda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santimirandarp/mrnobody/issues"
+  },
+  "homepage": "https://github.com/santimirandarp/mrnobody#readme",
+  "dependencies": {
+    "fibers": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {
+    "sass": "^1.25.0"
+  }
+}
