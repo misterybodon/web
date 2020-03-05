@@ -1,0 +1,67 @@
+@use 'resets';
+@use 'fonts';
+@use 'variables';
+html {
+  font-size: 100%;
+} /*16px*/
+body {
+  background-color: variables.$BC_body;
+  color: white;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  grid-template-rows: minmax(min-content, 20vh) minmax(min-content, 80vh); 
+}
+
+ul li {
+ list-style-image:url(./images/arrow-pointing-to-right-24.png);
+ padding:0.5rem;
+}
+
+
+
+a.class1 {
+ font-size:2rem;
+ color:$C_colorLinks;
+ position:relative;
+ display:flex;
+ flex-flow:row wrap;
+ align-items:center;
+ justify-content:center;
+ padding: 0px 0.8rem;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+@supports(writing-mode:sideways-rl){
+a:hover{text-decoration:none;}
+
+a.class1::before, a.class1::after{
+content:'';
+position:absolute;
+top:0;
+width:0;
+height:100%;
+transition:width .3s ease-out;
+}
+a.class1::after{
+background-image:linear-gradient(to right, rgba(#222,0.2), rgba(#ddd,0.2));
+left:0;
+}
+a.class1::before{
+writing-mode:sideways-rl;
+right:0;
+background-image:linear-gradient(to left, rgba(#222,0.2), rgba(#ddd,0.2));
+}
+a.class1:hover::before,
+a.class1:hover::after{
+width:50%;
+}
+}
+
+
+
+
+
