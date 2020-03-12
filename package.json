@@ -1,7 +1,7 @@
 {
-  "name": "index",
+  "name": "mrnobody",
   "version": "1.0.0",
-  "description": "Index for the project",
+  "description": "Thoughts and Ideas of a Stereotype",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,22 +11,20 @@
     "url": "git+https://github.com/santimirandarp/mrnobody.git"
   },
   "keywords": [
-    "simple",
-    "website",
-    "grids",
-    "flexbox",
-    "responsive",
-    "sass",
-    "gulp",
-    "workflow."
+    "mrnobody",
+    "stereotype",
+    "weird",
+    "meaning",
+    "of",
+    "life"
   ],
-  "author": "Santiago Miranda",
+  "author": "santiago miranda",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/santimirandarp/mrnobody/issues"
   },
   "homepage": "https://github.com/santimirandarp/mrnobody#readme",
-  "dependencies": {
+  "devDependencies": {
     "fibers": "^4.0.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -34,11 +32,10 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "imagemin": "^7.0.1",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-pngquant": "^8.0.0",
     "node-sass": "^4.13.1"
   },
-  "devDependencies": {
-    "sass": "^1.25.0"
+  "dependencies": {
+    "gulp-cli": "^2.2.0",
+    "gulp-imagemin": "^7.1.0"
   }
 }

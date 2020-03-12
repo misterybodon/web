@@ -1,16 +1,13 @@
 # mrnobody
 
-This is a website about an invented character, what I believe could be a stereotype 
-of some subset of humans quite frequent on this times. 
-
-This humans learn many things, most of them superficially, helped by the 
-internet's facilities.
+This is a website about an invented character called Mr Nobody. About the 
+character, and as a summary, I wouldn't be able to say much. It's just 
+what we may call a stereotype that is quite spread all over the globe,
+compared to decades or centuries ago.
 
 The gate to the website is on index.html, you can find the website on:
 https://santimirandarp.github.io/mrnobody/
 
-The pictures are taken by myself and the text in there are taken by myself. 
-The code is also completely written by my own.
-Some of the pictures might have some editing in GIMP (I'm on a linux 
-machine).
+Pictures, text and code, for good or bad, are my own contribution.
+Some of the pictures might have some editing in GIMP.
  
