@@ -20,13 +20,19 @@ $footerBackground: #d5cccc;
 $theDark: #444;
 $h2background:#008080;
 $theBrown:rgba(135, 116, 78);
+$anchors:gold;
+$hamburgerOff:#c8a242;
+$hamburgerOn:black;
 //USED ON SVGs
-$twitter: "#1da1f2";
-$facebook: "#4267b2";
+$twitter: #1da1f2;
+$facebook: #4267b2;
 $instagram: #e94752;
 $github: #000;
 
-
+//Button Colors
+//main button
+$bShadowCol:rgba(255,0,0,0.15);
+$bMainCol:#3c0505b3;
 //HAMBURGER
 $hamburgerLineHeight:4px;
 $hamburgerMargin:1rem;

@@ -5,15 +5,15 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 50px;
-    background-color: white;
-    position: absolute;
-    bottom: 0;
-  }
+//  &::after {
+//    content: "";
+//    display: block;
+//    width: 100%;
+//    height: 50px;
+//    background-color: white;
+//    position: absolute;
+//    bottom: 0;
+//  }
   //otherwise the image overflows.
   > * {
     position: absolute;
@@ -32,7 +32,7 @@
     height: 100%;
   }
 
-  h1 {
+ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -51,7 +51,7 @@
   > * {
     height: variables.$hamburgerLineHeight;
     border-radius: 5px;
-    background-color: white;
+    background-color: variables.$hamburgerOff;
     transition: 0.3s transform cubic-bezier(0.01, 0.62, 0.63, 0.79);
     //bezier generated using firefox dev tools
   }
@@ -61,6 +61,8 @@
     //they don't get fixed to the initial position.
     //so x and y are pointing to the corners of the container.
   }
+  &__line1, &__line2, &__line3{
+      background-color:variables.$hamburgerOn;}
   &__line1 {
     transform: rotateZ(225deg) translate(-5px, -5px);
   }

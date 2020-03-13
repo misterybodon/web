@@ -4,7 +4,7 @@
 @use 'fonts';
 @use 'variables';
 @use 'footer';
-
+@use 'buttons';
 body {
   text-align: center;
   background-color: variables.$theDark;
@@ -21,6 +21,11 @@ h2 {
 
 p {
   text-align: right;
+}
+a {color:variables.$anchors;
+&:hover{
+    text-decoration:underline;
+}
 }
 article p {
   text-align: justify;
