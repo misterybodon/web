@@ -1,10 +1,11 @@
 @use 'resets';
 @use 'variables';
+
 #backToTop {
-  background-image: radial-gradient(ellipse, $theDark,$bMainCol);
+  background-image: radial-gradient(ellipse, variables.$theDark, variables.$bMainCol);
   padding: 0.75rem 0;
   border-radius: 0.25rem;
-  box-shadow: 0 .2rem 0.2rem $bShadowCol; 
+  box-shadow: 0 .2rem 0.2rem variables.$bShadowCol; 
   width: 70%;
   margin: auto; 
 }

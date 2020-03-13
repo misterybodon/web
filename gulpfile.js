@@ -40,6 +40,7 @@ function scssTask() {
 }
 //minify all the images before copying to dist.
 function minifyImgs(){
+    console.log('images not watched. only minified when running gulp')
    return src(files.imgsrc)
     .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
