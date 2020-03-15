@@ -14,22 +14,22 @@ $smallspaceFooter: 1rem;
 $mediumspaceFooter: 2rem;
 
 // COLORS
-
 $footerBackground: #d5cccc;
-//thedark used in background color and footer text color
+//body
 $theDark: #444;
 $h2background:#008080;
+//for the sliding navbar
 $theBrown:rgba(135, 116, 78);
 $anchors:gold;
 $hamburgerOff:#c8a242;
+//after clicking, because of the brownn color
 $hamburgerOn:black;
-//USED ON SVGs
-$twitter: #1da1f2;
-$facebook: #4267b2;
-$instagram: #e94752;
-$github: #000;
 
-//Button Colors
+//Mr nobody, CARD
+$cardcolor:#717f71;
+//option 2 #5b1616bf
+$cardBoxShadow:rgba(0,0,0,0.5);
+//Back To Top Button
 //main button
 $bShadowCol:rgba(255,0,0,0.15);
 $bMainCol:#3c0505b3;
@@ -37,3 +37,11 @@ $bMainCol:#3c0505b3;
 $hamburgerLineHeight:4px;
 $hamburgerMargin:1rem;
 $hamburgerSize:2rem;
+
+//USED ON SVGs
+$twitter: #1da1f2;
+$facebook: #4267b2;
+$instagram: #e94752;
+$github: #000;
+
+

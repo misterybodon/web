@@ -1,39 +1,39 @@
 @use 'resets';
-@use 'header';
-@use 'pageLayout';
-@use 'fonts';
 @use 'variables';
+@use 'fonts';
+@use 'generalGrid';
+@use 'article';
+@use 'header';
+@use 'card';
+@use 'toTopButton';
 @use 'footer';
-@use 'buttons';
+
 body {
   text-align: center;
   background-color: variables.$theDark;
   color: white;
+  overflow-x:hidden;
+  //this needs to be solved
 }
+
 h2 {
   background: variables.$h2background;
-  width: 230px;
-  margin-left: 40px;
-  padding: 10px;
+  max-width: 14rem;
+  margin-left: 2.5rem;
+  padding: 0.7rem;
   text-align: right;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
 }
-//the first h2 margin is a bit too much. Removing it...
-.article__profile > h2:first-child {
-  margin-top: 0;
-}
+
 p {
   text-align: right;
 }
+
 a {color:variables.$anchors;
 &:hover{
     text-decoration:underline;
 }
 }
-article p {
-  text-align: justify;
-}
-.card > img {
- width:75%;
- margin: auto;
-}
+
+
+

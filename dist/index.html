@@ -12,18 +12,19 @@ chemistry, maths, literature." />
 <meta property="og:title" content="The Ramblings of Mr. Nobody" />
 <meta name="twitter:title" content="The Ramblings of Mr. Nobody" />
 <!--this is the fav icon, made w wbsite. -->
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"/>
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
-<link rel="manifest" href="images/site.webmanifest"/>
+<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png"/>
+<link rel="manifest" href="./images/site.webmanifest"/>
 <!--bring over the fonts from google -->
 <link href="https://fonts.googleapis.com/css?family=Sancreek|Balthazar&display=swap" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="./css/index.css" />
 </head>
+
 
 <body>
 
-  <header class="header">
+  <header id='top' class="header">
     <nav class="navbar">
       <div class="hamburger" id="hamburger" onclick=clickBurger()>
         <div></div>
@@ -91,17 +92,20 @@ chemistry, maths, literature." />
       <p>
         I am another puppet, an example case. I've studied a little bit of music,
         literature, philosophy, languages, science,
-        programming. This website is an attempt to show what"s going on inside
+        programming. This website is an attempt to show what's going on inside
         this kind of mind.
       </p>
     </section>
   </article>
 
   <section class="card">
-    <img src="images/hello.jpg" alt="Mr. Nobody Down the rain (with an 
-      umbrella).">
-    <h3 class="">Mr. Nobody</h3>
-    <p class="">Keywords: meaning of life, absurdism, truth.</p>
+      <figure class='card__figure'>
+    <h3>Mr. Nobody</h3>
+          <img src="images/hello_cropped_small.jpg" alt="Mr. Nobody picturing his shadown on a wall, gesturing a hello. "/>
+    <figcaption>
+    Keywords: meaning of life, absurdism, truth.
+    </figcaption>
+      </figure>
   </section>
 
   <section class="newposts">
@@ -109,9 +113,7 @@ chemistry, maths, literature." />
     <a href="post1/time.html">September 14, 2019: Time.</a>
   </section>
 
-  <nav class="backToTopNav">
-    <a id="backToTop" class="backToTop" href="#top">Back to top</a>
-  </nav>
+  <a id="backToTop" class="backToTop" href="#top"><img class="backToTop__img" src="./images/right.svg"/></a>
 
   <footer class="footer">
     <ul class="footer__social">
@@ -130,6 +132,11 @@ chemistry, maths, literature." />
   </footer>
   <script src="js/burger.js">
   </script>
+  <script src="js/smoothScroll.js">
+      </script>
+    <script>
+var scroll = new SmoothScroll('a[href*="#"]'); 
+    </script>
 </body>
 
 </html>

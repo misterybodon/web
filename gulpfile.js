@@ -12,7 +12,7 @@ const imagemin = require('gulp-imagemin');
 const files = {
     mainHTML:'source/index.html',
     dist:'dist/',
-	jsSource:'source/js/',
+	jsSource:'source/js/*',
 	jsDist:'dist/js/',
 	scssPath: 'source/sass/*.scss',
 	cssPath: 'dist/css',
@@ -26,7 +26,7 @@ return src(files.mainHTML)
 	.pipe(dest(files.dist))
 }
 function cpJs() {
-return src(`${files.jsSource}/burger.js`)
+return src(`${files.jsSource}`)
 	.pipe(dest(`${files.jsDist}`))
 }
 //..compile the scss files before copying to dist.

@@ -9,9 +9,9 @@ body {
     "header header header header header"
     ". . welcome . ."
     ". article article article ."
-    ". . card . ."
-    " . . newposts . ."
-    ". . backToTop . ."
+    "backToTop backToTop card . ."
+    " backToTop backToTop  newposts . ."
+   // ". . backToTop . ." will pos this sticky.
     //I would do ". . footer . ." but see below on footer
     " footer footer footer footer footer";
 }
@@ -30,10 +30,7 @@ header {
 .newposts {
   grid-area: newposts;
 }
-.backToTopNav {
-  //it's just a button
-  grid-area: backToTop;
-}
+
 .footer {
   grid-area: footer;
 }

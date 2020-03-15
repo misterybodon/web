@@ -1,5 +1,5 @@
-$BC_body:#333;
-$C_anchors:teal;
+$bcBody:#333;
+$cAnchors:teal;
 @mixin flexcenter($direction:row){
 display:flex;
 flex-flow:$direction wrap;
