@@ -1,0 +1,23 @@
+@use "variables";
+.card{
+    grid-area:"card";
+&__figure {
+> img {
+ width:75%;
+ border-radius: 4%;
+ box-shadow: 0.125rem 0.125rem 0 #000;
+}
+> h3 {
+    //im overwritting the general defined margin
+ margin: 1.3rem;
+}
+> figcaption {
+  text-align: center;
+  margin-top: 0.7rem;
+}
+@include variables.flexcenter(column, center, space-between);
+//the flex means: center horizontally and put them AFAP vertically.
+ background-color: variables.$cardcolor;
+ box-shadow: 0.125rem 0.125rem 0 variables.$cardBoxShadow;
+}
+}

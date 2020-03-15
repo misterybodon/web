@@ -59,6 +59,62 @@ small, .text_small {
   font-size: 0.8em;
 }
 
+img.socialLogo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.twitter:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.footer {
+  background-color: #d5cccc;
+  color: #333;
+}
+
+.footer {
+  display: grid;
+  align-items: center;
+  padding: 2rem;
+  grid-template-columns: repeat(2, 1rem) minmax(min-content, 1fr) repeat(2, 1rem);
+  row-gap: 1rem;
+}
+.footer__copyright {
+  text-align: right;
+  grid-column: 2/-2;
+}
+.footer__social {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  grid-column: 2/-2;
+}
+
+@media screen and (min-width: 700px) {
+  .footer__copyright {
+    text-align: center;
+  }
+  .footer__social {
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 900px) {
+  .footer {
+    grid-template-columns: repeat(2, 1rem) repeat(2, minmax(min-content, 1fr)) repeat(2, 1rem);
+    row-gap: 1rem;
+  }
+  .footer__copyright {
+    text-align: center;
+    grid-column: 4/5;
+  }
+  .footer__social {
+    grid-column: 3/4;
+    justify-content: space-around;
+  }
+}
 html {
   font-size: 100%;
 }
@@ -69,22 +125,24 @@ body {
   color: white;
   display: grid;
   height: 100vh;
-  grid-template-rows: minmax(80px 20vh) 1fr minmax(80px, 15vh);
+  text-align: center;
+  grid-template-rows: minmax(80px, 15vh) 1fr minmax(80px, 20vh);
 }
 
 h1 {
   display: grid;
   place-items: center;
+  padding: 1rem;
 }
 
-ul {
+ul.sites {
   display: grid;
   row-gap: 10px;
   place-items: center;
 }
 
-ul > li {
-  list-style-image: url(./images/arrow-pointing-to-right-24.png);
+ul.sites > li {
+  list-style-image: url(./../dist/images/arrow-pointing-to-right-24.png);
   padding: 0.5rem;
 }
 

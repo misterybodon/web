@@ -1,8 +1,24 @@
+@mixin flexcenter($direction:row, $align: center, $justify: center) {
+  display: flex;
+  flex-flow: $direction wrap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+//SPACING
+$smallspace: 1rem;
+$mediumspace: 3.1rem;
+$squareLogo: 1.2rem;
+$smallspaceFooter: 1rem;
+$mediumspaceFooter: 2rem;
+// COLORS
 $bcBody:#333;
 $cAnchors:teal;
-@mixin flexcenter($direction:row){
-display:flex;
-flex-flow:$direction wrap;
-align-items:center;
-justify-content:center;
-}
+$footerBackground: #d5cccc;
+//USED ON SVGs
+$twitter: #1da1f2;
+$facebook: #4267b2;
+$instagram: #e94752;
+$github: #000;
+
+$squareLogo:2rem;

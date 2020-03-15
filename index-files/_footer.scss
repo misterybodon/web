@@ -7,17 +7,15 @@ img.socialLogo {
 }
 
 .footer {
- background-color: variables.$footerBackground;
-  color: variables.$theDark;
   display: grid;
   align-items: center;
-   padding: variables.$mediumspaceFooter; 
-  // padding: variables.$mediumspaceFooter 0 variables.$smallspaceFooter;
+  padding: variables.$mediumspaceFooter;
   grid-template-columns:
     repeat(2, variables.$smallspace) minmax(min-content, 1fr)
     repeat(2, variables.$smallspace);
-row-gap:variables.$smallspace;
-  //row-gap: variables.$mediumspaceFooter;
+  row-gap: variables.$smallspace;
+  background-color: variables.$footerBackground;
+  color: variables.$bcBody;
   &__copyright {
     text-align: right;
     grid-column: 2 / -2;

@@ -35,20 +35,4 @@ header {
   grid-area: footer;
 }
 
-.footer {
-  display: grid;
-  align-items: center;
-  padding: variables.$mediumspaceFooter 0 variables.$smallspaceFooter;
-  grid-template-columns:
-    repeat(2, variables.$smallspace) minmax(min-content, 1fr)
-    repeat(2, variables.$smallspace);
-  row-gap: variables.$mediumspaceFooter;
-  &__copyright {
-    text-align: right;
-    grid-column: 2 / -2;
-  }
-  &__social {
-    @include variables.flexcenter(row, center, space-between);
-    grid-column: 2 / -2;
-  }
-}
+//footer is a grid too. Local layouts to be found on the respective files.

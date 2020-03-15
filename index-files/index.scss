@@ -1,6 +1,7 @@
 @use 'resets';
 @use 'fonts';
 @use 'variables';
+@use 'footer';
 html {
   font-size: 100%;
 } /*16px*/
@@ -10,15 +11,16 @@ body {
   display: grid;
   height: 100vh;
   text-align:center;
-  grid-template-rows: minmax(80px, 15vh) 1fr minmax(80px, 15vh);
+  grid-template-rows: minmax(80px, 15vh) 1fr minmax(80px, 20vh);
 }
-h1{display:grid;place-items:center;}
-ul {display:grid;
+h1{display:grid;place-items:center;
+padding:1rem;}
+ul.sites{display:grid;
     row-gap:10px;
     place-items:center}
 
-ul > li {
- list-style-image:url(./images/arrow-pointing-to-right-24.png);
+ul.sites > li {
+ list-style-image:url(./../dist/images/arrow-pointing-to-right-24.png);
  padding:0.5rem;
 }
 
