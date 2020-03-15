@@ -11,7 +11,7 @@ img.socialLogo {
   color: variables.$theDark;
   display: grid;
   align-items: center;
-   padding: variables.$mediumspaceFooter; 
+   padding: variables.$smallspaceFooter; 
   // padding: variables.$mediumspaceFooter 0 variables.$smallspaceFooter;
   grid-template-columns:
     repeat(2, variables.$smallspace) minmax(min-content, 1fr)
