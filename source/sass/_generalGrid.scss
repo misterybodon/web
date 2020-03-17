@@ -2,25 +2,16 @@
 @use 'variables';
 
 body {
+  row-gap:variables.$rowSmallGap;
   display: grid;
-  grid-template-columns: repeat(2, variables.$smallspace) 1fr repeat(2, variables.$smallspace);
-//  row-gap: variables.$mediumspace;
-grid-template-rows:repeat(2, auto variables.$mediumspace) repeat(2, auto variables.$smallspace) auto variables.$mediumspace auto;
-
+  grid-template-columns: repeat(2, variables.$columnSmallGap) 1fr repeat(2, variables.$columnSmallGap);
   grid-template-areas:
     "header header header header header"
-    ". . . . ."//empty row to better control the spacing
     ". . welcome . ."
-    " . . . . ."
     ". article article article ."
-    " . . . . ."
     "backToTop backToTop card . ."
-    "backToTop backToTop . . ."
     " backToTop backToTop  newposts . ."
-   // ". . backToTop . ." will pos this sticky.
-    //I would do ". . footer . ." but see below on foote
-" . . . . ."
-"footer footer footer footer footer";
+    "footer footer footer footer footer";
 }
 header {
   grid-area: header;
@@ -44,3 +35,20 @@ header {
 }
 
 //footer is a grid too. Local layouts to be found on the respective files.
+
+@media screen and (min-width:620px){
+body{  grid-template-columns: repeat(2, variables.$columnMediumGap) 1fr repeat(2, variables.$columnMediumGap);}
+}
+@media screen and (min-width:720px){
+body{ 
+grid-template-columns: variables.$columnLargeGap 1fr variables.$columnLargeGap;
+  grid-template-areas:
+    "header header header"
+    ". welcome ."
+    ". article ."
+    "backToTop card . "
+    "backToTop  newposts ."
+    "footer footer footer";
+}
+}
+

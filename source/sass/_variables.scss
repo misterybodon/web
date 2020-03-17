@@ -5,13 +5,30 @@
   justify-content: $justify;
 }
 
-//SPACING
-
-$smallspace: 1rem;
-$mediumspace: 2.1rem;
+//SPACING,
+//Main Grid
+$columnSmallGap:calc(1rem + 2vw);
+$columnMediumGap: calc(2.1rem + 2vw);
+$columnLargeGap:4rem;
+$rowSmallGap: calc(1rem);
+//welcomePar, padding
+$welcomePaddingTablets:2.5rem;
+//h2
+$h2MarginTop:2.1rem;
+$h2MarginBottom:1rem;
+//footer
+$footerPaddingTop:calc(1rem + 2vw);
+$footerPaddingBottom:calc(0.5rem + 2vw);
+$footerGridRowGap:calc(1rem + 2vw);
 $squareLogo: 1.8rem;
-$smallspaceFooter: 1rem;
-$mediumspaceFooter: 2rem;
+//RESPONSIVE FONTS
+//welcome section, paragraph
+$welcomeMarginTB:1.8rem;
+//paragraphs, responsive increase of font size
+$headersFontChange:0.4vw;
+$parFontChange:0.8vw;
+$headersFontChangeTablets:0.3vw;
+$parFontChangeTablets:0.6vw;
 
 // COLORS
 $footerBackground: #d5cccc;

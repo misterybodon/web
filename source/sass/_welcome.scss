@@ -1,0 +1,10 @@
+@use "variables";
+
+section.welcome > p {
+    margin:variables.$welcomeMarginTB 0 variables.$welcomeMarginTB;
+}
+@media screen and (min-width:720px){
+    section.welcome > p {
+        padding: 0 variables.$welcomePaddingTablets;
+text-align:center;    }
+}

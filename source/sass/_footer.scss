@@ -10,14 +10,12 @@ img.socialLogo {
  background-color: variables.$footerBackground;
   color: variables.$theDark;
   display: grid;
+padding:variables.$footerPaddingTop 0 variables.$footerPaddingBottom; 
   align-items: center;
-   padding: variables.$smallspaceFooter; 
-  // padding: variables.$mediumspaceFooter 0 variables.$smallspaceFooter;
   grid-template-columns:
-    repeat(2, variables.$smallspace) minmax(min-content, 1fr)
-    repeat(2, variables.$smallspace);
-row-gap:variables.$smallspace;
-  //row-gap: variables.$mediumspaceFooter;
+    repeat(2, variables.$columnSmallGap) minmax(min-content, 1fr)
+    repeat(2, variables.$columnSmallGap);
+row-gap:variables.$footerGridRowGap;
   &__copyright {
     text-align: right;
     grid-column: 2 / -2;
@@ -27,6 +25,15 @@ row-gap:variables.$smallspace;
     grid-column: 2 / -2;
   }
 }
+@media screen and (min-width:620px){
+.footer{
+   grid-template-columns:
+    repeat(2, variables.$columnMediumGap) repeat(2,minmax(min-content, 1fr))
+    repeat(2, variables.$columnMediumGap);
+  row-gap: variables.$rowSmallGap;
+}
+}
+
 @media screen and (min-width:700px){
 .footer{
     &__copyright{
@@ -37,10 +44,6 @@ row-gap:variables.$smallspace;
 }
 @media screen and (min-width:900px){
 .footer{
-   grid-template-columns:
-    repeat(2, variables.$smallspace) repeat(2,minmax(min-content, 1fr))
-    repeat(2, variables.$smallspace);
-  row-gap: variables.$smallspace;
  &__copyright{
         text-align:center;
     grid-column: 4 / 5;

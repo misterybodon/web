@@ -92,3 +92,6 @@
 .trigger__navbar {
   width: 100vw;
 }
+@media screen and (min-width:700px){
+    .trigger__navbar{width:50vw;}
+}
