@@ -2,7 +2,7 @@ const navBar = document.getElementById("navbar__ul")
 const lines = document.getElementById("hamburger").children
 const cardH2Chevron=document.getElementById("card__h2chevron");
 const wrapper=document.getElementById("card__wrapper")
-const rotateCard=document.getElementById("rotating__card")
+const rotateImage=document.getElementById("card__rotateImage")
 function clickBurger() {
     navBar.classList.toggle("trigger__navbar")
     lines[0].classList.toggle("hamburger__line1")
@@ -11,9 +11,9 @@ function clickBurger() {
   }
 
 function showCard(){
-wrapper.classList.toggle("card__wrapper--fullHeight");
-cardH2Chevron.classList.toggle("card__h2chevron--close");
+wrapper.classList.toggle("card__wrapper--fullHeight")
+cardH2Chevron.classList.toggle("card__h2chevron--close")
 }
-function rotateCard(){
-    rotateCard.classList.toggle("rotating__card")
+function rotateCardImage(){
+    rotateImage.classList.toggle("card__rotateImage")
 }
