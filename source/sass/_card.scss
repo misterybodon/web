@@ -26,9 +26,12 @@ overflow:hidden;
     //class added w javascript once h2 is clicked
 > img {
  width:50%;
- border-radius: 4%;
- box-shadow: 0.125rem 0.125rem 0 #000;
+ border-radius:4%;
+ box-shadow:.125rem .125rem 0 #000;
+ transform: rotate(-1deg);
+ transition:transform 0.3s ease;
 }
+> img.rotate__card{transform:rotate(0deg);}
 > h3 {
     //im overwritting the general defined margin
  margin: 1.3rem;
