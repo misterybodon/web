@@ -1,9 +1,31 @@
 @use "variables";
 .card{
     grid-area:"card";
+    > &__h2{
+     &:hover{
+    cursor:pointer;}
+}
+ &__h2chevron {
+     //i've changed the image default display to block
+   display:inline-block;
+    width:1rem;
+    height:1rem;
+    transform:rotate(90deg);
+    transition:transform 0.3s ease-in-out;
+   &--close{transform:rotate(-90deg);
+}
+}
+&__wrapper{
+height:0;
+overflow:hidden;
+    width:100%;
+    transition:height 0.5s ease-out;
+&--fullHeight{height:100%;}
+    }
 &__figure {
+    //class added w javascript once h2 is clicked
 > img {
- width:75%;
+ width:50%;
  border-radius: 4%;
  box-shadow: 0.125rem 0.125rem 0 #000;
 }

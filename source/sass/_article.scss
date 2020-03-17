@@ -2,6 +2,6 @@ article p {
   text-align: justify;
 }
 
-article > section > h2 {
+article > section:first-child > h2 {
 margin-top:0;}
 article a {display:inline-block;}

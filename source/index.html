@@ -17,7 +17,7 @@ chemistry, maths, literature." />
 <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png"/>
 <link rel="manifest" href="./images/site.webmanifest"/>
 <!--bring over the fonts from google -->
-<link href="https://fonts.googleapis.com/css?family=Sancreek|Balthazar&display=swap" rel="stylesheet" />
+/<link href="https://fonts.googleapis.com/css?family=Sancreek|Balthazar&display=swap" rel="stylesheet" />
 <link rel="stylesheet" type="text/css" href="./css/index.css" />
 </head>
 
@@ -99,13 +99,16 @@ chemistry, maths, literature." />
   </article>
 
   <section class="card">
-      <figure class='card__figure'>
+      <h2  onclick=showCard() class="card__h2">ID CARD <img id="card__h2chevron" src="images/arrow.svg" class="card__h2chevron" alt="down arrow, dropdown menu on click"></h2>
+      <div class="card__wrapper" id="card__wrapper">
+ <figure class="card__figure" id="card__figure">
     <h3>Mr. Nobody</h3>
           <img src="images/hello_cropped_small.jpg" alt="Mr. Nobody picturing his shadown on a wall, gesturing a hello. "/>
     <figcaption>
     Keywords: meaning of life, absurdism, truth.
     </figcaption>
       </figure>
+      </div>
   </section>
 
   <section class="newposts">
@@ -113,7 +116,7 @@ chemistry, maths, literature." />
     <a href="post1/time.html">September 14, 2019: Time.</a>
   </section>
 
-  <a id="backToTop" class="backToTop" href="#top"><img class="backToTop__img" src="./images/right.svg"/></a>
+  <a id="backToTop" class="backToTop" href="#top"><img class="backToTop__img" src="./images/right_gold.svg"/></a>
 
   <footer class="footer">
     <ul class="footer__social">
@@ -127,10 +130,10 @@ chemistry, maths, literature." />
             alt="instagram logo, link to personal account" /></a></li>
     </ul>
     <div class="footer__copyright">
-      &copy; 2019 Mister Nobody.
+      &copy; 2020 Mister Nobody.
     </div>
   </footer>
-  <script src="js/burger.js">
+  <script src="js/toggler.js">
   </script>
   <script src="js/smoothScroll.js">
       </script>
