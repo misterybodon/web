@@ -1,14 +1,14 @@
-const { src, dest, watch, series, parallel } = require('gulp');
+//Imports
+const { src, dest, watch, series, parallel } = require('gulp')
 const postcss = require('gulp-postcss')
-const autoprefixer = require('autoprefixer');
+const autoprefixer = require('autoprefixer')
 const sass = require('gulp-sass')
-const Fiber = require('fibers');
-const sourcemaps = require('gulp-sourcemaps');
-sass.compiler = require('sass');
-const imagemin = require('gulp-imagemin');
+const Fiber = require('fibers')
+const sourcemaps = require('gulp-sourcemaps')
+sass.compiler = require('sass')
+const imagemin = require('gulp-imagemin')
 
-//--paths to files----
-
+//path to file
 const files = {
     mainHTML:'source/index.html',
     dist:'dist/',
@@ -20,7 +20,7 @@ const files = {
     imgdest:'dist/images'
 }
 
-//copy files to dist
+//copy files to dist folder.
 function cpHtml() {
 return src(files.mainHTML)
 	.pipe(dest(files.dist))
@@ -29,7 +29,7 @@ function cpJs() {
 return src(`${files.jsSource}`)
 	.pipe(dest(`${files.jsDist}`))
 }
-//..compile the scss files before copying to dist.
+//..compile the scss files to compressed, prefixed css files and copy them to dist.
 function scssTask() {
 	return src(files.scssPath)
 		.pipe(sourcemaps.init())
@@ -38,7 +38,7 @@ function scssTask() {
 		.pipe(sourcemaps.write())
 		.pipe(dest(files.cssPath))
 }
-//minify all the images before copying to dist.
+//minify all images and copy them to dist.
 function minifyImgs(){
     console.log('images not watched. only minified when running gulp')
    return src(files.imgsrc)
@@ -60,14 +60,13 @@ function watchTask() {
 	return watch(
         [files.scssPath, 
         files.mainHTML, 
-        files.jsSource, 
-        files.imgsrc], 
+        files.jsSource], 
         parallel(scssTask, cpHtml, cpJs)
 	)}
 
 
 //to run when running 'gulp' i.e the default task
-exports.default = series(parallel(cpHtml, scssTask, cpJs,minifyImgs), watchTask)
+exports.default = series(parallel(cpHtml, scssTask, cpJs, minifyImgs), watchTask)
 
 // TODOS
 //checkout next.js on npm 
