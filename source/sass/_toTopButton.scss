@@ -2,18 +2,16 @@
 @use 'variables';
 
 .backToTop {
-    grid-area:backToTop;
- background-image: radial-gradient(ellipse, variables.$theDark, variables.$bMainCol);
-  position:sticky;
-  @include variables.flexcenter(column, center,center);
-  top:0;
-  right:0;
-  padding: 0.75rem 0;
-  border-radius: 50%;
-  box-shadow: 0 .2rem 0.2rem variables.$bShadowCol; 
-  height:2.5rem;
-  width: 2.0rem;
+ grid-area:backToTop;
+ background-image:radial-gradient(ellipse, variables.$theDark, variables.$bMainCol);
+ position:sticky;
+ display:grid;
+ place-items:center;
+ box-shadow:0 0.2rem .2rem rgba(255,0,0,0.5), inset 0 0.15rem 0.15rem rgb(255, 0, 0.1);
+ height:2.8rem;
+ width:2.3rem;
+ border-radius:50%;
   &__img {width:80%;
   transform:rotate(-90deg);}
-  
-}
+ }
+

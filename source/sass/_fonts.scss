@@ -9,12 +9,10 @@ body {
   font-weight: 400;
   line-height: 1.65;
 }
-
 p {
-    font-size: calc(1rem + #{variables.$parFontChange});
-  margin-bottom: 1.15rem;
+font-size: calc(1rem + #{variables.$parFontChange});
+margin-bottom: 1.15rem;
 }
-
 h1,
 h2,
 h3,
@@ -25,103 +23,50 @@ h5 {
   font-weight: 400;
   line-height: 1.15;
 }
-
 h1 {
-  margin-top: 0;
-  font-size: calc(1.802rem + #{variables.$headersFontChange});
+margin-top: 0;
+font-size: calc(1.802rem + #{variables.$headersFontChange});
 }
-
 h2 {
-margin-top:variables.$h2MarginTop;
-margin-bottom:variables.$h2MarginBottom;
-  font-size: calc(1.602rem + #{variables.$headersFontChange})
+margin: variables.$h2MarginTop auto variables.$h2MarginBottom variables.$h2MarginLeft; 
+padding:.7rem;
+max-width:14rem;
+font-size: calc(1.602rem + #{variables.$headersFontChange})
 }
-
 h3 {
   font-size: 1.424rem;
 }
-
 h4 {
   font-size: 1.266rem;
 }
-
 h5 {
   font-size: 1.125rem;
 }
-
 small,
 .text_small {
   font-size: 0.889rem;
 }
 @media screen and (min-width:720px){
-html {font-size:20px;}
 p {
 font-size: calc(1rem + #{variables.$parFontChangeTablets});
-  margin-bottom: 1.15rem;
 }
-
 h1 {
-  margin-top: 0;
   font-size: calc(1.802rem + #{variables.$headersFontChangeTablets});
-  
 }
-
 h2 {
-margin-top:variables.$h2MarginTop;
-margin-bottom:variables.$h2MarginBottom;
-   font-size: calc(1.602rem + #{variables.$headersFontChangeTablets});
-}
-
-h3 {
-  font-size: 1.424rem;
-}
-
-h4 {
-  font-size: 1.266rem;
-}
-
-h5 {
-  font-size: 1.125rem;
-}
-
-small,
-.text_small {
-  font-size: 0.889rem;
+font-size: calc(1.602rem + #{variables.$headersFontChangeTablets});
 }
 }
 @media screen and (min-width:900px){
 html {font-size:24px;}
 p {
  font-size: 1.15rem;
-  margin-bottom: 1.15rem;
 }
-
 h1 {
-  margin-top: 0;
   font-size: 1.802rem;
 }
-
 h2 {
-margin-top:variables.$h2MarginTop;
-margin-bottom:variables.$h2MarginBottom;
-  font-size:1.602rem;
-}
-
-h3 {
-  font-size: 1.424rem;
-}
-
-h4 {
-  font-size: 1.266rem;
-}
-
-h5 {
-  font-size: 1.125rem;
-}
-
-small,
-.text_small {
-  font-size: 0.889rem;
+font-size:1.602rem;
 }
 }
 

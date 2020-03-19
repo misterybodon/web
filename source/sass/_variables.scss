@@ -10,21 +10,20 @@
 $columnSmallGap:calc(1rem + 2vw);
 $columnMediumGap: calc(2.1rem + 2vw);
 $columnLargeGap:4rem;
-$rowSmallGap: calc(1rem);
+$rowSmallGap: 1rem;
 //welcomePar, padding
+$welcomeMarginTB:1.8rem;
 $welcomePaddingTablets:2.5rem;
 //h2
 $h2MarginTop:2.1rem;
 $h2MarginBottom:1rem;
+$h2MarginLeft:2.5rem;
 //footer
 $footerPaddingTop:calc(1rem + 2vw);
 $footerPaddingBottom:calc(0.5rem + 2vw);
 $footerGridRowGap:calc(1rem + 2vw);
 $squareLogo: 1.8rem;
 //RESPONSIVE FONTS
-//welcome section, paragraph
-$welcomeMarginTB:1.8rem;
-//paragraphs, responsive increase of font size
 $headersFontChange:0.4vw;
 $parFontChange:0.8vw;
 $headersFontChangeTablets:0.3vw;
@@ -33,8 +32,10 @@ $parFontChangeTablets:0.6vw;
 // COLORS
 $footerBackground: #d5cccc;
 //body
-$theDark: #444;
+$bodyBackground: #442d2d;
+$theDark:#444;
 $h2background:#008080;
+$theRed:#991a1a;
 //for the sliding navbar
 $theBrown:rgba(135, 116, 78);
 $anchors:gold;
