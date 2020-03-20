@@ -21,6 +21,8 @@ const files = {
 }
 
 //copy files to dist folder.
+const copyTask = parallel(cpJs, cpHtml, scssTask);
+
 function cpHtml() {
 return src(files.mainHTML)
 	.pipe(dest(files.dist))
@@ -61,12 +63,14 @@ function watchTask() {
         [files.scssPath, 
         files.mainHTML, 
         files.jsSource], 
-        parallel(scssTask, cpHtml, cpJs)
+        copyTask
 	)}
 
 
 //to run when running 'gulp' i.e the default task
-exports.default = series(parallel(cpHtml, scssTask, cpJs, minifyImgs), watchTask)
+exports.noImage = copyTask;
+exports.onlyImage = minifyImgs;
+exports.default = series(parallel(copyTask, minifyImgs), watchTask)
 
 // TODOS
 //checkout next.js on npm 
