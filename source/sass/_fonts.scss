@@ -2,7 +2,7 @@
 @use 'variables';
 
 html {
-  font-size: 20px;
+  font-size: 21px;
 }
 body {
   font-family: "Balthazar", serif;
@@ -46,17 +46,7 @@ small,
 .text_small {
   font-size: 0.889rem;
 }
-@media screen and (min-width:720px){
-p {
-font-size: calc(1rem + #{variables.$parFontChangeTablets});
-}
-h1 {
-  font-size: calc(1.802rem + #{variables.$headersFontChangeTablets});
-}
-h2 {
-font-size: calc(1.602rem + #{variables.$headersFontChangeTablets});
-}
-}
+
 @media screen and (min-width:900px){
 html {font-size:24px;}
 p {

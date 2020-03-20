@@ -30,40 +30,6 @@
     z-index: 1;
   }
 }
-.hamburger {
-  position: absolute;
-  z-index: 999;
-  top: variables.$hamburgerMargin;
-  right: variables.$hamburgerMargin;
-  height: variables.$hamburgerSize;
-  width: variables.$hamburgerSize;
-  @include variables.flexcenter(column, stretch, space-evenly);
-  > div {
-    height: variables.$hamburgerLineHeight;
-    border-radius: 5px;
-    background-color: variables.$hamburgerOff;
-    transition: 0.3s transform cubic-bezier(0.01, 0.62, 0.63, 0.79);
-    //bezier generated using firefox dev tools
-  }
-  &:hover {
-    cursor: pointer;
-    //when an object is rotated, the axis rotate with it,
-    //they don't get fixed to the initial position.
-    //so x and y are pointing to the corners of the container.
-  }
-  &__line1, &__line2, &__line3{
-      background-color:variables.$hamburgerOn;}
-  &__line1 {
-    transform: rotateZ(225deg) translate(-5px, -5px);
-  }
-  &__line2 {
-    display: none;
-  }
-  &__line3 {
-    transform: rotateZ(-225deg) translate(-5px, 5px);
-  }
-}
-
 .navbar__ul {
   display: grid;
   place-items: center;
@@ -75,6 +41,9 @@
   z-index: 10;
   padding-top: 3rem;
   overflow: hidden;
+  //overflow hidden holds the word hidden, otherwise 
+  //the default is overflow visible, even if we write 
+  //width:0;`
   transition: width 0.5s ease-out;
   background-color: #87744e;
 }

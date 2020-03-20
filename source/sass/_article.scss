@@ -1,7 +1,6 @@
 article p {
   text-align: justify;
 }
-
-article > section:first-child > h2 {
-margin-top:0;}
-article a {display:inline-block;}
+.article__profile > h2:first-child {
+    margin-top:0;
+}

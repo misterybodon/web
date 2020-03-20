@@ -6,8 +6,8 @@
     cursor:pointer;}
 }
  &__h2chevron {
-     //i've changed the image default display to block
-   display:inline-block;
+    display:inline-block; 
+    //do not remove (imgs reset to block)
     width:1rem;
     height:1rem;
     transform:rotate(90deg);
@@ -16,14 +16,14 @@
 }
 }
 &__wrapper{
-height:0;
-overflow:hidden;
+    height:0;
     width:100%;
+    overflow:hidden;
     transition:height 0.5s ease-out;
-&--fullHeight{height:100%;}
+    &--fullHeight{height:100%;}
     }
 &__figure {
-    //class added w javascript once h2 is clicked
+//class added w javascript once h2 is clicked
 > img {
  width:50%;
  border-radius:4%;
@@ -33,16 +33,15 @@ overflow:hidden;
 }
 > img.card__rotateImage{transform:rotate(1deg);}
 > h3 {
-    //im overwritting the general defined margin
  margin: 1.3rem;
 }
 > figcaption {
   text-align: center;
   margin-top: 0.7rem;
 }
+//center horizontally, AFAP vertically.
 @include variables.flexcenter(column, center, space-between);
-//the flex means: center horizontally and put them AFAP vertically.
- background-color: variables.$cardcolor;
- box-shadow: 0.125rem 0.125rem 0 variables.$cardBoxShadow;
+background-color: variables.$cardcolor;
+box-shadow: 0.125rem 0.125rem 0 variables.$cardBoxShadow;
 }
 }
