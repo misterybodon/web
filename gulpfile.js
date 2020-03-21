@@ -7,21 +7,19 @@ const Fiber = require('fibers')
 const sourcemaps = require('gulp-sourcemaps')
 sass.compiler = require('sass')
 const imagemin = require('gulp-imagemin')
-//dont minify minified images (rename)
-const rename = require('gulp-rename');
-const filter = require('gulp-filter');
-const clean = require('gulp-clean');
+const clean = require('gulp-clean')
+const rename = require('gulp-rename')
 //path to file
 const files = {
     mainHTML:'source/index.html',
     dist:'dist/',
     source:'source/',
-    imgSource:'source/images',
 	jsSource:'source/js/*',
 	jsDist:'dist/js/',
 	scssPath: 'source/sass/*.scss',
 	cssPath: 'dist/css',
     imgsrcfile:'source/images/*',
+    imgSource:'source/images/',
     imgDest:'dist/images'
 }
 //copy files to dist folder.
@@ -45,12 +43,9 @@ function scssTask() {
 		.pipe(dest(files.cssPath))
 }
 
-//the images must be minified. Use imagemin for that
-//once it's done, 
+//only minified files that have not been minified before.
 function minifyImgs(){
-   const f = filter(['**','!*-min*'])
-   return src(files.imgsrcfile)
-    .pipe(f)
+   return src([files.imgsrcfile, `!${files.imgSource}*-min*`])
     .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
     imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -63,9 +58,7 @@ function minifyImgs(){
     })
 ]))
     .pipe(clean())
-    .pipe(f)
-    .pipe(rename(function(path)
-     {path.basename += '-min'}))
+    .pipe(rename(function(path){path.basename += '-min'}))
     .pipe(dest(files.imgSource))
     .pipe(dest(files.imgDest))
 }
@@ -73,8 +66,9 @@ function watchTask() {
 	return watch(
         [files.scssPath, 
         files.mainHTML, 
-        files.jsSource], 
-        copyTask
+        files.jsSource,
+        files.imgSource], 
+        parallel(copyTask, minifyImgs)
 	)}
 //to run when running 'gulp' i.e the default task
 exports.noImage = copyTask;
