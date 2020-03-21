@@ -7,19 +7,23 @@ const Fiber = require('fibers')
 const sourcemaps = require('gulp-sourcemaps')
 sass.compiler = require('sass')
 const imagemin = require('gulp-imagemin')
-
+//dont minify minified images (rename)
+const rename = require('gulp-rename');
+const filter = require('gulp-filter');
+const clean = require('gulp-clean');
 //path to file
 const files = {
     mainHTML:'source/index.html',
     dist:'dist/',
+    source:'source/',
+    imgSource:'source/images',
 	jsSource:'source/js/*',
 	jsDist:'dist/js/',
 	scssPath: 'source/sass/*.scss',
 	cssPath: 'dist/css',
-    imgsrc:'source/images/*',
-    imgdest:'dist/images'
+    imgsrcfile:'source/images/*',
+    imgDest:'dist/images'
 }
-
 //copy files to dist folder.
 const copyTask = parallel(cpJs, cpHtml, scssTask);
 
@@ -40,10 +44,13 @@ function scssTask() {
 		.pipe(sourcemaps.write())
 		.pipe(dest(files.cssPath))
 }
-//minify all images and copy them to dist.
+
+//the images must be minified. Use imagemin for that
+//once it's done, 
 function minifyImgs(){
-    console.log('images not watched. only minified when running gulp')
-   return src(files.imgsrc)
+   const f = filter(['**','!*-min*'])
+   return src(files.imgsrcfile)
+    .pipe(f)
     .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
     imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -55,9 +62,13 @@ function minifyImgs(){
         ]
     })
 ]))
-    .pipe(dest(files.imgdest))
+    .pipe(clean())
+    .pipe(f)
+    .pipe(rename(function(path)
+     {path.basename += '-min'}))
+    .pipe(dest(files.imgSource))
+    .pipe(dest(files.imgDest))
 }
-
 function watchTask() {
 	return watch(
         [files.scssPath, 
@@ -65,8 +76,6 @@ function watchTask() {
         files.jsSource], 
         copyTask
 	)}
-
-
 //to run when running 'gulp' i.e the default task
 exports.noImage = copyTask;
 exports.onlyImage = minifyImgs;
