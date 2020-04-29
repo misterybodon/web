@@ -7,7 +7,7 @@ body {
   grid-template-columns: repeat(2, variables.$columnSmallGap) 1fr repeat(2, variables.$columnSmallGap);
   grid-template-areas:
     "header header header header header"
-    ". . welcome . ."
+    ". welcome welcome welcome ."
     ". article article article ."
     "backToTop backToTop card . ."
     " backToTop backToTop  newposts . ."
@@ -34,8 +34,23 @@ header {
   grid-area: footer;
 }
 
-//footer is a grid too. Local layouts to be found on the respective files.
 
+
+@media screen and (min-width:400px){
+
+body {
+  grid-template-areas:
+    "header header header header header"
+    ". . welcome . ."
+    ". article article article ."
+    "backToTop backToTop card . ."
+    " backToTop backToTop  newposts . ."
+    "footer footer footer footer footer";
+}
+
+
+//footer is a grid too. Local layouts to be found on the respective files.
+}
 @media screen and (min-width:620px){
 body{  grid-template-columns: repeat(2, variables.$columnMediumGap) 1fr repeat(2, variables.$columnMediumGap);}
 }

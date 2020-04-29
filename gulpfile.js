@@ -11,13 +11,16 @@ const clean = require('gulp-clean')
 const rename = require('gulp-rename')
 //path to file
 const files = {
-    mainHTML:'source/index.html',
+    mainHTML:'source/**/*.html',
+    mainCss: 'dist/css',
+    mainScss: 'source/sass/index.scss',
+  notmainScss:'!source/sass/index.scss',
+//post stands for posts, for each blog post, not for post processing.
+    postScss:'source/**/*.scss',
     dist:'dist/',
     source:'source/',
-	jsSource:'source/js/*',
-	jsDist:'dist/js/',
-	scssPath: 'source/sass/*.scss',
-	cssPath: 'dist/css',
+    jsSource:'source/js/*',
+    jsDist:'dist/js/',
     imgsrcfile:'source/images/*',
     imgSource:'source/images/',
     imgDest:'dist/images'
@@ -29,20 +32,35 @@ function cpHtml() {
 return src(files.mainHTML)
 	.pipe(dest(files.dist))
 }
+
 function cpJs() {
 return src(`${files.jsSource}`)
 	.pipe(dest(`${files.jsDist}`))
 }
+
 //..compile the scss files to compressed, prefixed css files and copy them to dist.
-function scssTask() {
-	return src(files.scssPath)
+function scssTask(cb) {
+  mainScss();
+  postScss();
+  cb()
+}
+function mainScss(){
+  return src(files.mainScss)
 		.pipe(sourcemaps.init())
-		.pipe(sass({ fiber: Fiber, outputStyle: 'compressed' }))
+	.pipe(sass({ fiber: Fiber, outputStyle: 'compressed' }))
 		.pipe(postcss([autoprefixer()]))
 		.pipe(sourcemaps.write())
-		.pipe(dest(files.cssPath))
+		.pipe(dest(files.dist))
 }
-
+//post stands for posts, for each blog post, not for post processing.
+function postScss(){
+  return src([files.postScss,files.notmainScss])
+    .pipe(sourcemaps.init())
+    .pipe(sass({ fiber: Fiber, outputStyle: 'compressed' }))
+		.pipe(postcss([autoprefixer()]))
+		.pipe(sourcemaps.write())
+		.pipe(dest(files.dist))
+}
 //only minified files that have not been minified before.
 function minifyImgs(){
    return src([files.imgsrcfile, `!${files.imgSource}*-min*`])
@@ -64,13 +82,15 @@ function minifyImgs(){
 }
 function watchTask() {
 	return watch(
-        [files.scssPath, 
+        [files.mainScss,
+          files.postScss,
         files.mainHTML, 
         files.jsSource,
         files.imgSource], 
         parallel(copyTask, minifyImgs)
 	)}
 //to run when running 'gulp' i.e the default task
+exports.onlyhtml = cpHtml 
 exports.noImage = copyTask;
 exports.onlyImage = minifyImgs;
 exports.default = series(parallel(copyTask, minifyImgs), watchTask)
