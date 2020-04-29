@@ -1,0 +1,64 @@
+@use 'resets';
+@use 'variables';
+
+img.socialLogo {
+  width: variables.$squareLogo;
+  height: variables.$squareLogo;
+}
+
+.footer {
+  background-color: variables.$footerBackground;
+  color: variables.$theDark;
+  padding:variables.$footerPaddingTop 0 variables.$footerPaddingBottom; 
+  align-items: center;
+  display: grid;
+  grid-template-columns:
+    repeat(2, variables.$columnSmallGap) 1fr
+    repeat(2, variables.$columnSmallGap);
+    row-gap: variables.$footerGridRowGap;
+  &__copyright, &__social {
+      grid-column: 2 / -2;}
+  &__copyright {
+    text-align: right;
+  }
+  &__social {
+    @include variables.flexcenter(row, center, space-between);
+  }
+}
+@media screen and (min-width:620px){
+.footer{
+   grid-template-columns:
+    repeat(2, variables.$columnMediumGap) 
+1fr repeat(2, variables.$columnMediumGap);
+  row-gap: variables.$rowSmallGap;
+}
+}
+
+@media screen and (min-width:720px){
+.footer{
+   grid-template-columns:
+    variables.$columnLargeGap 
+1fr variables.$columnLargeGap;
+  row-gap: variables.$rowSmallGap;
+&__copyright, &__social{
+    grid-column: 2 / 3;
+}
+   &__copyright{
+        text-align:center;
+    }
+    &__social{justify-content:space-around;}
+}
+}
+@media screen and (min-width:900px){
+.footer{
+grid-template-columns:
+    variables.$columnLargeGap 
+ 2fr 1fr variables.$columnLargeGap;
+ &__copyright{
+    grid-column: 3 / 4;
+    }
+    &__social{
+    grid-column: 2 / 3;
+    }
+}  
+}

@@ -45,7 +45,7 @@
   //the default is overflow visible, even if we write 
   //width:0;`
   transition: width 0.5s ease-out;
-  background-color:variables.$theBrown; 
+background-color:variables.$theBrown; 
 }
 //this class is added to navbar using js. It switches smoothly from width:0; to width:100vw;
 .trigger__navbar {

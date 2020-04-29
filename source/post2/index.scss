@@ -3,12 +3,9 @@
 @use 'fonts';
 @use 'generalGrid';
 @use 'hamburger';
-@use 'welcome';
 @use 'article';
 @use 'header';
-@use 'card';
 @use 'toTopButton';
-@use 'newPosts';
 @use 'footer';
 
 body {
@@ -19,12 +16,8 @@ body {
 
 .header h1 {
  text-shadow: 2px 2px 1px variables.$theRed;
- opacity:1;
- transition:opacity 0.4s ease-in;
 }
-.header .h1Vanisher{
-  opacity:0;
-}
+
 h2 {
  color:white;
  transform:rotate(1deg);
@@ -37,15 +30,15 @@ h2 {
 p {
   text-align: right;
 }
-p.topTagLine{
-  background-color:#111;
-  text-align:center;
-  width:100%;
-  font-size:16px;
-  letter-spacing:1px;
-  color:rgba(234, 38, 38, 0.8)
-}
 
+p.topTagLine{
+background-color:#111;
+text-align:center;
+width:100%; 
+font-size:16px;
+letter-spacing:1px;
+color:rgba(234, 38, 38, 0.8)
+}
 a {color:variables.$anchors;
     &:hover{
     text-decoration:underline;

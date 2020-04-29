@@ -11,8 +11,8 @@ $columnSmallGap:calc(1rem + 2vw);
 $columnMediumGap: calc(2.1rem + 2vw);
 $columnLargeGap:4rem;
 $rowSmallGap: 1rem;
+$noGap:0em;
 //welcomePar, padding
-$welcomeSmallMarginTB:1.2rem;
 $welcomeMarginTB:1.8rem;
 $welcomePaddingTablets:2.5rem;
 //h2
@@ -28,7 +28,6 @@ $squareLogo: 1.8rem;
 $headersFontChange:0.2vw;
 $parFontChange:0.4vw;
 // COLORS
-
 $footerBackground: #d5cccc;
 //body
 $bodyBackground: #442d2d;
@@ -36,14 +35,12 @@ $theDark:#444;
 $h2background:#008080;
 $theRed:#991a1a;
 //for the sliding navbar
-$theGreen:#093e27;
-$theBrown:rgba(60, 46, 17, 0.9);
-$theBrown2:rgba(135, 116, 78,0.9);
+$theBrown:rgba(135, 116, 78);
 $anchors:gold;
 $hamburgerOff:#c8a242;
 //after clicking, because of the brownn color
-$hamburgerOn2:black;
-$hamburgerOn:#ee0934;
+$hamburgerOn:black;
+
 //Mr nobody, CARD
 $cardcolor:#717f71;
 //option 2 #5b1616bf
