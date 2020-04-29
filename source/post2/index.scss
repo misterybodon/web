@@ -1,12 +1,12 @@
-@use 'resets';
+@use '../sass/resets';
 @use 'variables';
-@use 'fonts';
+@use '../sass/fonts';
 @use 'generalGrid';
-@use 'hamburger';
-@use 'article';
+@use '../sass/hamburger';
+@use '../sass/article';
 @use 'header';
-@use 'toTopButton';
-@use 'footer';
+@use '../sass/toTopButton';
+@use '../sass/footer';
 
 body {
   text-align: center;
