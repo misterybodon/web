@@ -1,5 +1,6 @@
-@use 'resets';
-@use 'variables';
+@use '../sass/resets';
+@use '../sass/variables';
+
 
 body {
   row-gap:variables.$noGap;
@@ -7,8 +8,8 @@ body {
   grid-template-columns: repeat(2, variables.$columnSmallGap) 1fr repeat(2, variables.$columnSmallGap);
   grid-template-areas:
     "header header header header header"
-    "backToTop backToTop article . ."
-    "backToTop backToTop newposts . ."
+    "backToTop article article article ."
+    "backToTop newposts newposts newposts ."
     "footer footer footer footer footer";
 }
 header {
@@ -27,7 +28,6 @@ grid-area:backToTop;
 .footer {
   grid-area: footer;
 }
-
 //footer is a grid too. Local layouts to be found on the respective files.
 
 @media screen and (min-width:620px){

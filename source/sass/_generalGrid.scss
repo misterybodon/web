@@ -8,9 +8,9 @@ body {
   grid-template-areas:
     "header header header header header"
     ". welcome welcome welcome ."
-    ". article article article ."
-    "backToTop backToTop card . ."
-    " backToTop backToTop  newposts . ."
+    "backToTop article article article ."
+    "backToTop card card card ."
+    "backToTop newposts  newposts newposts ."
     "footer footer footer footer footer";
 }
 header {
@@ -22,19 +22,18 @@ header {
 .article {
   grid-area: article;
 }
-
 .card {
   grid-area: card;
 }
 .newposts {
   grid-area: newposts;
 }
-
 .footer {
   grid-area: footer;
 }
-
-
+.backToTop{
+  grid-area:backToTop;
+}
 
 @media screen and (min-width:400px){
 

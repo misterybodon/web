@@ -1,0 +1,42 @@
+@use 'variables';
+@use 'resets';
+body {
+  text-align: center;
+  background-color: variables.$bodyBackground;
+  color: white;
+} 
+
+.header h1 {
+ text-shadow: 2px 2px 1px variables.$theRed;
+ opacity:1;
+ transition:opacity 0.4s ease-in;
+}
+.header .h1Vanisher{
+  opacity:0;
+}
+h2 {
+ color:white;
+ transform:rotate(1deg);
+ background:teal;
+ text-align:right;
+ box-shadow:.15rem .25rem .25rem rgba(0,0,0,.25);
+ text-shadow: 2px 2px 1px variables.$theRed;
+}
+
+p {
+  text-align: right;
+}
+p.topTagLine{
+  background-color:#111;
+  text-align:center;
+  width:100%;
+  font-size:16px;
+  letter-spacing:1px;
+  color:rgba(234, 38, 38, 0.8)
+}
+
+a {color:variables.$anchors;
+    &:hover{
+    text-decoration:underline;
+    }
+}
