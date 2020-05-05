@@ -2,9 +2,13 @@
 @use 'resets';
 body {
   text-align: center;
-  background-color: variables.$bodyBackground;
+  background-color: black;
   color: white;
 } 
+
+.body {
+background-color: variables.$bodyBackground;
+}
 
 .header h1 {
  text-shadow: 2px 2px 1px variables.$theRed;
@@ -40,3 +44,25 @@ a {color:variables.$anchors;
     text-decoration:underline;
     }
 }
+
+@media screen and (min-width: 900px) {
+/* body { */
+.body {
+max-width: 900px;
+margin: auto;
+}
+
+p.topTagLine {
+font-size: 18px;
+position: relative;
+margin: 0;
+padding: 5px;
+}
+
+}
+
+
+
+
+
+

@@ -48,4 +48,6 @@ bottom: 8px;
     //they don't get fixed to the initial position.
     //so x and y are pointing to the corners of the container.
 
-
+@media screen and (min-width:900px){
+.hamburger{display:none;}
+}

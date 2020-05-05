@@ -6,6 +6,7 @@
 @use '../sass/toTopButton';
 @use '../sass/footer';
 @use '../sass/orphans';//selectors not fitting in any previous category.
+@use '../sass/header';
 @use '../postsass/generalGrid';
-@use '../postsass/header';
+@use '../postsass/headerDiff';
 

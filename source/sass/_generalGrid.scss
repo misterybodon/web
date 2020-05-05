@@ -1,17 +1,18 @@
 @use 'resets';
 @use 'variables';
 
-body {
-  row-gap:variables.$rowSmallGap;
-  display: grid;
-  grid-template-columns: repeat(2, variables.$columnSmallGap) 1fr repeat(2, variables.$columnSmallGap);
-  grid-template-areas:
-    "header header header header header"
-    ". welcome welcome welcome ."
-    "backToTop article article article ."
-    "backToTop card card card ."
-    "backToTop newposts  newposts newposts ."
-    "footer footer footer footer footer";
+.body {
+background-color:variables.$bodyBackground;
+row-gap:variables.$rowSmallGap;
+display: grid;
+grid-template-columns: repeat(2, variables.$columnSmallGap) 1fr repeat(2, variables.$columnSmallGap);
+grid-template-areas:
+"header header header header header"
+". welcome welcome welcome ."
+"backToTop article article article ."
+"backToTop card card card ."
+"backToTop newposts  newposts newposts ."
+"footer footer footer footer footer";
 }
 header {
   grid-area: header;
@@ -37,7 +38,7 @@ header {
 
 @media screen and (min-width:400px){
 
-body {
+.body {
   grid-template-areas:
     "header header header header header"
     ". . welcome . ."
@@ -51,10 +52,10 @@ body {
 //footer is a grid too. Local layouts to be found on the respective files.
 }
 @media screen and (min-width:620px){
-body{  grid-template-columns: repeat(2, variables.$columnMediumGap) 1fr repeat(2, variables.$columnMediumGap);}
+.body{  grid-template-columns: repeat(2, variables.$columnMediumGap) 1fr repeat(2, variables.$columnMediumGap);}
 }
 @media screen and (min-width:720px){
-body{ 
+.body{ 
 grid-template-columns: variables.$columnLargeGap 1fr variables.$columnLargeGap;
   grid-template-areas:
     "header header header"
