@@ -1,50 +1,73 @@
 .wholePage{
-  display:grid;
+display:grid;
 grid-template-areas:
- "body"
-"donate"
-"contribute";
+"body"
+"donateContribute"
+"disqus"
+"footer"
+
 &__body{
   grid-area:body;
 }
-.wholePage__flex{
+&__flex{
+  grid-area:donateContribute;
+  display:flex;
+  flex-direction:column;
 }
 }
-@media screen and (min-width:400px) 
-{.wholePage{
-  display:grid;
-  grid-template-columns:repeat(2, 1fr);
- grid-template-areas:
- "body body" 
- "donate contribute"
+.disqus{
+  grid-area:disqus;
 }
-}
-@media screen and (min-width:600px) 
-{.wholePage{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
- grid-template-areas:
- "body body body" 
- "donate . contribute"
-}
+.footer{
+  grid-area:footer;
 }
 
-@media screen and (min-width:800px) 
+@media screen and (min-width:700px) 
 {.wholePage{
   display:grid;
   grid-template-columns:repeat(4, 1fr);
  grid-template-areas:
  "body body body body" 
- ". donate contribute ."
+ ". donateContribute donateContribute ."
+ "disqus disqus disqus disqus" 
+ "footer footer footer footer" 
+ &__flex{
+   flex-direction:row;
 }
 }
-@media screen and (min-width:1000px) 
-{.wholePage{
+}
+@media screen and (min-width:1000px) {
+  .wholePage{
   display:grid;
-  grid-template-columns: 1fr 900px 1fr;
+  grid-template-columns: minmax(1fr, 200px)  900px minmax(1fr, 200px);
   grid-template-areas:
-  "contribute body donate"
-". body ."
-". body  ."
+  "donateContribute body ."
+". disqus ."
+". footer  .";
 }
 }
+
+
+
+
+
+/* index.css | file:///home/santi/Desktop/mrnobody/dist/index.css */
+
+@media screen and (min-width: 1000px) {
+    .wholePage {
+          /* grid-template-columns: minmax(1fr, 200px) 900px minmax(1fr,
+           * 200px); */
+      /* grid-template-columns: minmax\(auto, auto 900px minmax(auto, 200px);
+       * */
+      /* grid-template-columns: minmax\(auto, 2 900px minmax(auto, 200px); */
+      /* grid-template-columns: minmax\(auto, 20 900px minmax(auto, 200px); */
+      /* grid-template-columns: minmax\(auto, 200 900px minmax(auto, 200px); */
+      /* grid-template-columns: minmax\(auto, 200p 900px minmax(auto, 200px);
+       * */
+      /* grid-template-columns: minmax\(auto, 200px 900px minmax(auto, 200px);
+       * */
+      grid-template-columns: minmax(auto, 200px) 900px minmax(auto, 200px);
+          margin: auto;
+            }
+          }
+

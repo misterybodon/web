@@ -1,20 +1,20 @@
-@use 'resets';
-@use 'fonts';
 @use 'variables';
 @use 'footer';
-html {
-  font-size: 100%;
-} /*16px*/
+@use 'fonts';
+@use 'resets';
 body {
-  background-color: #333;
-  color: white;
+  background-color:variables.$bodyBackground;
   display: grid;
   height: 100vh;
   text-align:center;
   grid-template-rows: minmax(80px, 15vh) 1fr minmax(80px, 20vh);
+  color:variables.$bodyColor;
 }
-h1{display:grid;place-items:center;
-padding:1rem;}
+h1{
+display:grid;
+place-items:center;
+padding:1rem;
+}
 ul.sites{display:grid;
     row-gap:10px;
     place-items:center}

@@ -36,8 +36,6 @@ img.socialLogo {
 
 @media screen and (min-width:720px){
 .footer{
-background-color:variables.$lightGrey;
-    color:#ccc;
    grid-template-columns:
     variables.$columnLargeGap 
 1fr variables.$columnLargeGap;
