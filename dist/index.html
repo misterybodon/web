@@ -23,8 +23,13 @@ chemistry, maths, literature." />
     https://simpleicons.org/ -->
 </head>
 
-<body>
-  <div class="body">
+<body class="wholePage">
+  <section class="wholePage__flex">
+       <a href="someaddresshere">Donate</a>
+    <a href="https://github.com/misterybodon/web">Contribute<a>
+    </section>
+
+  <section class="body wholePage__body">
 <header id='top' class="header">
     <nav class="navbar">
       <div class="hamburger" id="hamburger" onclick=clickBurger()>
@@ -119,7 +124,7 @@ chemistry, maths, literature." />
 <section class="newposts">
     <h2>New Posts</h2>
     <ul>
-    <li><a href="post1/webdev.html">May 2nd, 2020: Some thoughts on Web
+    <li><a href="post1/webdev.html#disqus_thread">May 2nd, 2020: Some thoughts on Web
      Dev</a></li>
     <!-- <li><a href="post2/time.html">September 14, 2019: Time.</a></li> -->
      </ul>
@@ -134,7 +139,7 @@ chemistry, maths, literature." />
 
 var disqus_config = function () {
 this.page.url = "https://misterybodon.github.io/web/dist/index.html"  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "indexPage"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.identifier = "misterybodonIndexPage"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 /
 (function() { // DON'T EDIT BELOW THIS LINE
@@ -148,6 +153,7 @@ s.setAttribute('data-timestamp', +new Date());
                             
 
 
+  </section>
 <footer class="footer">
     <ul class="footer__social">
       <li>
@@ -167,7 +173,7 @@ s.setAttribute('data-timestamp', +new Date());
       &copy; 2020 Mister Nobody.
     </div>
 </footer>
-  </div>
+
   <script src="js/toggler.js">
   </script>
   <script src="js/smoothScroll.js">

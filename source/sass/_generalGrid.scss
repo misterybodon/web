@@ -12,7 +12,6 @@ grid-template-areas:
 "backToTop article article article ."
 "backToTop card card card ."
 "backToTop newposts  newposts newposts ."
-"footer footer footer footer footer";
 }
 header {
   grid-area: header;
@@ -45,7 +44,6 @@ header {
     ". article article article ."
     "backToTop backToTop card . ."
     " backToTop backToTop  newposts . ."
-    "footer footer footer footer footer";
 }
 
 
@@ -63,7 +61,6 @@ grid-template-columns: variables.$columnLargeGap 1fr variables.$columnLargeGap;
     ". article ."
     "backToTop card . "
     "backToTop  newposts ."
-    "footer footer footer";
 }
 }
 

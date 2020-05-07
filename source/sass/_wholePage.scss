@@ -1,0 +1,50 @@
+.wholePage{
+  display:grid;
+grid-template-areas:
+ "body"
+"donate"
+"contribute";
+&__body{
+  grid-area:body;
+}
+.wholePage__flex{
+}
+}
+@media screen and (min-width:400px) 
+{.wholePage{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+ grid-template-areas:
+ "body body" 
+ "donate contribute"
+}
+}
+@media screen and (min-width:600px) 
+{.wholePage{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+ grid-template-areas:
+ "body body body" 
+ "donate . contribute"
+}
+}
+
+@media screen and (min-width:800px) 
+{.wholePage{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+ grid-template-areas:
+ "body body body body" 
+ ". donate contribute ."
+}
+}
+@media screen and (min-width:1000px) 
+{.wholePage{
+  display:grid;
+  grid-template-columns: 1fr 900px 1fr;
+  grid-template-areas:
+  "contribute body donate"
+". body ."
+". body  ."
+}
+}
