@@ -36,7 +36,8 @@ p.topTagLine{
   width:100%;
   font-size:16px;
   letter-spacing:1px;
-  color:rgba(234, 38, 38, 0.8)
+  color:rgba(234, 38, 38, 0.8);
+  z-index:15;
 }
 
 a {color:variables.$anchors;

@@ -7,7 +7,7 @@ compared to decades or centuries ago.
 The gate to the website is on index.html and the actual website files are under the __dist__ folder.
 
 
-[Mr Nobody, Mindgate](https://santimirandarp.github.io/mrnobody/ "The Website")
+[Mr Nobody, Mindgate](https://misterybodon.github.io/ "The Website")
 
 Pictures, text and code, for good or bad, are my own contribution.
 

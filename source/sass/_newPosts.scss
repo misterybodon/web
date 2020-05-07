@@ -1,4 +1,7 @@
 @use 'resets';
-.newposts > ul > li {
+.newposts {
+  margin-bottom:80px;
+> ul > li {
   text-align:left;
+}
 }

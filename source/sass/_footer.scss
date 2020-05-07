@@ -36,6 +36,8 @@ img.socialLogo {
 
 @media screen and (min-width:720px){
 .footer{
+background-color:variables.$lightGrey;
+    color:#ccc;
    grid-template-columns:
     variables.$columnLargeGap 
 1fr variables.$columnLargeGap;
@@ -44,13 +46,6 @@ img.socialLogo {
     grid-column: 2 / 3;
 }
    &__copyright{
-        text-align:center;
-    }
-    &__social{justify-content:space-around;}
-}
-}
-@media screen and (min-width:900px){
-.footer{
 grid-template-columns:
     variables.$columnLargeGap 
  2fr 1fr variables.$columnLargeGap;
@@ -62,3 +57,5 @@ grid-template-columns:
     }
 }  
 }
+}
+
