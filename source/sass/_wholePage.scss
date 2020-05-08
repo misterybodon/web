@@ -4,26 +4,24 @@ grid-template-areas:
 "body"
 "donateContribute"
 "disqus"
-"footer"
-
-&__body{
+"footer";
+& > .body{
   grid-area:body;
 }
-&__flex{
+& > .getInvolved{
   grid-area:donateContribute;
   display:flex;
-  flex-direction:column;
+   flex-direction:column;
 }
-}
-.disqus{
+& > .comments{
   grid-area:disqus;
 }
-.footer{
+& > .footer{
   grid-area:footer;
 }
-
-@media screen and (min-width:700px) 
-{.wholePage{
+}
+@media screen and (min-width:700px) {
+  .wholePage{
     max-width:900px;
     margin:auto;
   display:grid;
@@ -34,19 +32,27 @@ grid-template-areas:
  "disqus disqus disqus disqus" 
  "footer footer footer footer" ;
  &__flex{
-   flex-direction:row;
+ flex-direction:row;
+ justify-content:space-around;
+  align-items:center;
 }
 }
 }
 @media screen and (min-width:1000px) {
   .wholePage{
+   max-width:1300px;
   grid-template-columns: minmax(auto, 200px) 900px minmax(auto, 200px);
-  grid-template-columns: minmax(1fr, 200px)  900px minmax(1fr, 200px);
   grid-template-areas:
   "donateContribute body ."
-". disqus ."
-". footer  .";
+  ". disqus ."
+  ". footer  .";
+  &__flex{
+  flex-direction:column;
+  justify-content:flex-start;
+  margin-top:50vh;
 }
+}
+
 }
 
 
