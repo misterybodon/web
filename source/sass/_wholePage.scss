@@ -24,13 +24,15 @@ grid-template-areas:
 
 @media screen and (min-width:700px) 
 {.wholePage{
+    max-width:900px;
+    margin:auto;
   display:grid;
   grid-template-columns:repeat(4, 1fr);
  grid-template-areas:
  "body body body body" 
  ". donateContribute donateContribute ."
  "disqus disqus disqus disqus" 
- "footer footer footer footer" 
+ "footer footer footer footer" ;
  &__flex{
    flex-direction:row;
 }
@@ -38,7 +40,7 @@ grid-template-areas:
 }
 @media screen and (min-width:1000px) {
   .wholePage{
-  display:grid;
+  grid-template-columns: minmax(auto, 200px) 900px minmax(auto, 200px);
   grid-template-columns: minmax(1fr, 200px)  900px minmax(1fr, 200px);
   grid-template-areas:
   "donateContribute body ."
@@ -51,23 +53,5 @@ grid-template-areas:
 
 
 
-/* index.css | file:///home/santi/Desktop/mrnobody/dist/index.css */
 
-@media screen and (min-width: 1000px) {
-    .wholePage {
-          /* grid-template-columns: minmax(1fr, 200px) 900px minmax(1fr,
-           * 200px); */
-      /* grid-template-columns: minmax\(auto, auto 900px minmax(auto, 200px);
-       * */
-      /* grid-template-columns: minmax\(auto, 2 900px minmax(auto, 200px); */
-      /* grid-template-columns: minmax\(auto, 20 900px minmax(auto, 200px); */
-      /* grid-template-columns: minmax\(auto, 200 900px minmax(auto, 200px); */
-      /* grid-template-columns: minmax\(auto, 200p 900px minmax(auto, 200px);
-       * */
-      /* grid-template-columns: minmax\(auto, 200px 900px minmax(auto, 200px);
-       * */
-      grid-template-columns: minmax(auto, 200px) 900px minmax(auto, 200px);
-          margin: auto;
-            }
-          }
 
