@@ -10,7 +10,7 @@ grid-template-areas:
 "header header header header header"
 ". welcome welcome welcome ."
 "backToTop article article article ."
-"backToTop card card card ."
+//"backToTop card card card ."
 "backToTop newposts  newposts newposts ."
 }
 header {
@@ -22,9 +22,7 @@ header {
 .article {
   grid-area: article;
 }
-.card {
-  grid-area: card;
-}
+//.card { grid-area: card;}
 .newposts {
   grid-area: newposts;
 }
@@ -42,7 +40,7 @@ header {
     "header header header header header"
     ". . welcome . ."
     ". article article article ."
-    "backToTop backToTop card . ."
+//    "backToTop backToTop card . ."
     " backToTop backToTop  newposts . ."
 }
 
@@ -59,8 +57,8 @@ grid-template-columns: variables.$columnLargeGap 1fr variables.$columnLargeGap;
     "header header header"
     ". welcome ."
     ". article ."
-    "backToTop card . "
-    "backToTop  newposts ."
+ //   "backToTop card . "
+ "backToTop  newposts ."
 }
 }
 

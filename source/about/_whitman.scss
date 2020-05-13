@@ -1,0 +1,24 @@
+.whitmanPar{
+&__pic{float:left;width:50%;}
+&__line{text-align:center}
+}
+@media screen and (min-width:700px){
+.whitmanPar{
+  clear:none;
+  overflow:visible;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+}
+}
+@support(shape-outside){
+@media screen and (min-width:700px){
+.whitmanPar{
+clear:both;
+overflow:hidden;
+&__pic{width:50%;float:left;}
+&__line{text-align:center;}
+}
+}
+}

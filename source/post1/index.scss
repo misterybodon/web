@@ -8,6 +8,7 @@
 @use '../sass/footer';
 @use '../sass/orphans';//selectors not fitting in any previous category.
 @use '../sass/header';
+@use '../sass/wholePage';
 @use '../postsass/generalGrid';
 @use '../postsass/headerDiff';
 @use '../postsass/postorphans';

@@ -1,7 +1,7 @@
 @use "variables";
 .card{
     grid-area:"card";
-    > &__h2{
+    &__h2{
      &:hover{
     cursor:pointer;}
 }
