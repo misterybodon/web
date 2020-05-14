@@ -6,8 +6,8 @@
  grid-template-areas:
  "body body body body" 
  ". donateContribute donateContribute ."
- "disqus disqus disqus disqus" 
- "footer footer footer footer" ;
+ "disqus disqus disqus disqus"
+ "footer footer footer footer"; 
 &__body{
   grid-area:body;
 }
@@ -18,10 +18,10 @@
  justify-content:space-around;
   align-items:center;
 }
-& > .comments{
+.comments{
   grid-area:disqus;
 }
-& > .footer{
+.footer{
   grid-area:footer;
 }
 }
