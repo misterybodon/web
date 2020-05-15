@@ -33,7 +33,7 @@ header {
   grid-area:backToTop;
 }
 
-@media screen and (min-width:400px){
+@media screen and (min-width:300px){
 
 .body {
 grid-template-columns: repeat(2, variables.$columnExtraSmallGapLeft) 1fr repeat(2,
