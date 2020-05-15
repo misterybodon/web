@@ -3,7 +3,8 @@
 
 .header {
   min-height:300px;
-  height: 110vh;
+  height:100vh;
+  height: -webkit-fill-available;
   max-height:600px;
 //  position: relative;
 //  overflow: hidden;
@@ -40,7 +41,8 @@ position:relative;
   right: 0;
   width: 0;
   top: 0;
-  height: 110vh;
+  height:100vh;
+  height: -webkit-fill-available;
   max-height:600px;
   z-index: 10;
   padding-top: 3rem;
