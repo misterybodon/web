@@ -8,7 +8,7 @@
   height:100vh;
   height: -webkit-fill-available;
 //  height: -moz-available; 
-  max-height:500px;
+  max-height:450px;
 }
 .header {
   overflow:hidden;
@@ -32,7 +32,7 @@
     //not sure if this makes the image square?
     //height is 100% of what?
     height: 100%;
-    max-height:600px;
+    max-height:500px;
   }
 
   > .showcase__h1 {
@@ -62,6 +62,14 @@
 //this class is added to navbar using js. It switches smoothly from width:0; to width:100vw;
 .trigger__navbar {
   width: 100vw;
+}
+@media screen and (min-width:550px){
+.header, .navbar__ul{
+  max-height:550px;
+}
+.header__showcaseimg{
+    max-height:550px;
+}
 }
 @media screen and (min-width:700px){
     .trigger__navbar{width:50vw;}
