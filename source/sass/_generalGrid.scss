@@ -36,8 +36,8 @@ header {
 @media screen and (min-width:400px){
 
 .body {
-grid-template-columns: repeat(2, variables.$columnExtraSmallGap) 1fr repeat(2,
-variables.$columnExtraSmallGap);
+grid-template-columns: repeat(2, variables.$columnExtraSmallGapLeft) 1fr repeat(2,
+variables.$columnExtraSmallGapRight);
   grid-template-areas:
     "header header header header header"
     ". . welcome . ."
