@@ -5,6 +5,7 @@
   min-height:300px;
   height:100vh;
   height: -webkit-fill-available;
+  height: -moz-available; 
   max-height:600px;
 //  position: relative;
 //  overflow: hidden;
@@ -43,6 +44,7 @@ position:relative;
   top: 0;
   height:100vh;
   height: -webkit-fill-available;
+  height: -moz-available; 
   max-height:600px;
   z-index: 10;
   padding-top: 3rem;
