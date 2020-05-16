@@ -2,6 +2,10 @@
 .newposts {
   margin-bottom:80px;
 > ul > li {
-  text-align:left;
+  text-align:center;
 }
 }
+@media screen and (min-width:700px){
+.newposts > ul > li {text-align:left;}
+}
+

@@ -1,19 +1,1 @@
-@use '../sass/resets';
-@use '../sass/variables';
-
-.header {
-  height: 60vh;
-  position:relative;
-  min-height:250px;
-/*for instance, we may want to add a picture to any post and we should
-uncomment this piece of code and addapt it (will overwrite header.scss)    &__showcaseimg {
-    //display set to block in _resets
-    object-fit: cover;
-    min-width: 200px;
-    min-height:300px;
-    width: 100%;
-    height: 100%;
-  }
-*/  
-}
 

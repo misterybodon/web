@@ -1,6 +1,11 @@
 article p {
+  text-align:left;
+}
+@media screen and (min-width:400px){
+article p {
   text-align: justify;
 }
-.article__profile > h2:first-child {
-    margin-top:0;
 }
+article > section:first-child > h2{
+margin-top:0;}
+

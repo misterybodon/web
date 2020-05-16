@@ -1,7 +1,7 @@
 @use 'resets';
 @use 'variables';
 .header, .navbar__ul{
-  min-height:300px;
+  min-height:250px;
   //if someone resizes the window, it should 
   //change dynamically (that's why I use vh in between 300px 
   //and 500px.
@@ -12,13 +12,14 @@
 }
 .header {
   overflow:hidden;
-    position:relative;
+  position:relative;
   > * {
     position: absolute;
   }
   .navbar {
-    //positions the navbar on the top right corner
-    //of the header.
+    //navbar on the top right corner
+    //wraps hamburger and the navigation list (as a sibling of the
+    //hamburger).
     top: 0;
     right: 0;
     display: grid;
@@ -40,8 +41,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 11;
+    text-shadow: 2px 2px 1px variables.$theRed;
+    opacity:1;
+    transition:opacity 0.4s ease-in;
   }
 }
+//finish all header's first children. Now we go deeper.
 .navbar__ul {
   display: grid;
   place-items: center;
@@ -49,7 +54,8 @@
   right: 0;
   width: 0;
   top: 0;
-  z-index: 10;
+
+  z-index: 20;
   padding-top: 3rem;
   overflow: hidden;
   //overflow hidden holds the links hidden, otherwise 
@@ -59,6 +65,19 @@
   background-color:variables.$theBrown; 
 }
 
+p.topTagLine{
+  background-color:#111;
+  text-align:center;
+  width:100%;
+  font-size:16px;
+  letter-spacing:1px;
+  color:rgba(234, 38, 38, 0.8);
+  z-index:15;
+}
+
+ .header .h1Vanisher{
+  opacity:0;
+}
 //this class is added to navbar using js. It switches smoothly from width:0; to width:100vw;
 .trigger__navbar {
   width: 100vw;
@@ -79,14 +98,14 @@
 
 .header {
 max-height: 600px;
-overflow: hidden;
 height: 60vh;
 & > .showcase__h1{
 top: calc(50% + 39.7px / 2 + 47.25px / 2);
 }
+//img was absolute, I might review that.
 & > .showcase__img{position:relative}
 .navbar {
-  //flexcenter will be found in variables.scss of course.
+  //flexcenter will be found in variables.scss.
 @include variables.flexcenter(
 column);
 min-height:auto;
@@ -105,5 +124,11 @@ padding: 0.3rem 0;
 overflow: visible;
 transition: none;
 width: 100%;
+}
+p.topTagLine {
+font-size: 18px;
+position: relative;
+margin: 0;
+padding: 5px;
 }
 }

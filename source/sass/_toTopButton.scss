@@ -14,14 +14,11 @@
  }
 
 @media screen and (min-width:700px){
-  .backToTop {
+.backToTop {
 background-image:radial-gradient(ellipse, variables.$theDark, variables.$bMainCol);
 box-shadow: 0 .2rem .2rem rgba(255, 0, 0, 0.19),inset 0 .15rem .15rem #ff000075;
 margin:5px;
  height:2.5rem;
  width:2.1rem;
- border-radius:50%;
-  &__img {width:80%;
-  transform:rotate(-90deg);}
+  }
  }
-}

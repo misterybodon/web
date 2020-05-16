@@ -23,18 +23,20 @@ h5 {
   font-weight: 400;
   line-height: 1.15;
 }
+
 h1 {
 margin-top: 0;
-font-size: calc(1.602rem + #{variables.$headersFontChange});
+font-size: calc(1.452rem + #{variables.$headersFontChange});
 }
 h2 {
 margin: variables.$h2MarginTop auto variables.$h2MarginBottom variables.$h2MarginLeft; 
 padding:.7rem;
 max-width:14rem;
-font-size: calc(1.402rem + #{variables.$headersFontChange})
+font-size: calc(1.252rem + #{variables.$headersFontChange})
 }
+
 h3 {
-  font-size: 1.224rem;
+  font-size: 1.154rem;
 }
 h4 {
   font-size: 1.266rem;

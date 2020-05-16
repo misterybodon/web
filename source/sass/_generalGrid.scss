@@ -36,21 +36,36 @@ header {
 @media screen and (min-width:300px){
 
 .body {
+  //this gaps (left and right) and intentionally defined differently so we
+  //optimize space usage.
 grid-template-columns: repeat(2, variables.$columnExtraSmallGapLeft) 1fr repeat(2,
 variables.$columnExtraSmallGapRight);
   grid-template-areas:
     "header header header header header"
     ". . welcome . ."
-    ". article article article ."
+    "backToTop article article article ."
 //    "backToTop backToTop card . ."
-    " backToTop backToTop  newposts . ."
+    " backToTop newposts  newposts newposts ."
 }
-
-
 //footer is a grid too. Local layouts to be found on the respective files.
 }
+@media screen and (min-width:500px){
+.body{
+grid-template-columns: repeat(2, variables.$columnSmallGap) 1fr repeat(2,
+variables.$columnSmallGap);
+}
+}
 @media screen and (min-width:620px){
-.body{  grid-template-columns: repeat(2, variables.$columnMediumGap) 1fr repeat(2, variables.$columnMediumGap);}
+.body{  grid-template-columns: repeat(2, variables.$columnMediumGap) 1fr repeat(2, variables.$columnMediumGap);
+
+  grid-template-areas:
+    "header header header header header"
+    ". welcome welcome welcome ."
+    "backToTop article article article ."
+//    "backToTop backToTop card . ."
+    " backToTop newposts  newposts newposts ."
+
+}
 }
 @media screen and (min-width:720px){
 .body{ 
@@ -58,7 +73,7 @@ grid-template-columns: variables.$columnLargeGap 1fr variables.$columnLargeGap;
   grid-template-areas:
     "header header header"
     ". welcome ."
-    ". article ."
+    "backToTop article ."
  //   "backToTop card . "
  "backToTop  newposts ."
 }

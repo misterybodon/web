@@ -1,6 +1,8 @@
+@use 'variables';
+//wholepage is a wrapper inner to the body tag.
 .wholePage{
-    max-width:900px;
-    margin:auto;
+  max-width:900px;
+  margin:auto;
   display:grid;
   grid-template-columns:repeat(4, 1fr);
  grid-template-areas:
@@ -8,15 +10,13 @@
  ". donateContribute donateContribute ."
  "disqus disqus disqus disqus"
  "footer footer footer footer"; 
+ //here I define the 4 areas of the wholePage grid.
 &__body{
   grid-area:body;
 }
- &__getInvolved{
+&__getInvolved{
    grid-area:donateContribute;
-   display:flex;
- flex-direction:row;
- justify-content:space-around;
-  align-items:center;
+   @include variables.flexcenter(row,center, space-around);
 }
 .comments{
   grid-area:disqus;
