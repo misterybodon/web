@@ -1,0 +1,7 @@
+h1{font-size:30px;}
+@media screen and (min-width:350px){
+  h1{
+  font-size:calc(1.602rem + #{variables.$headersFontChange});
+}
+}
+  
