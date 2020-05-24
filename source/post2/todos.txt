@@ -1,0 +1,4 @@
+1. Use ffmpeg in the proper way to stabilize the video
+2. Create a thumbnail, black background white letters ubuntu font
+"Wish You Were Here
+by Mr. Nobody"
