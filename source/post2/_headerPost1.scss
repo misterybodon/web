@@ -1,0 +1,24 @@
+@media screen and (min-width:700px){
+.header, .navbar__ul{
+  
+min-height:400px;
+height:90vh;
+max-height:600px}
+}
+@media screen and (min-width:800px){
+.header{
+max-height:700px}
+}
+@media screen and (min-width:900px){
+
+.header{
+max-height:800px}
+.navbar__ul{
+  min-height:auto;
+  max-height:auto;
+  height:auto;
+}
+.body{box-shadow:1px 1px 3px rgba(255,255,255,0.5);
+
+}
+}

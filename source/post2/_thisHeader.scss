@@ -1,0 +1,22 @@
+.header > .showcase__h1{
+text-align:center;
+top:75%}
+
+@media screen and (min-width:350px){
+
+.header > .showcase__h1 {
+top:80%;
+}
+}
+@media screen and (min-width:750px){
+
+  .header > .showcase__h1 {
+    top: 50%;
+    left:80%;
+text-align:right;
+  }
+}
+@media screen and (min-width:900px){
+  .body{box-shadow:1px 1px 3px rgba(255, 255, 255, 0.5);
+  }
+}
