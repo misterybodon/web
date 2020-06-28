@@ -1,4 +1,4 @@
-//Imports
+//Importss
 const { src, dest, watch, series, parallel } = require('gulp')
 const postcss = require('gulp-postcss')
 const autoprefixer = require('autoprefixer')
