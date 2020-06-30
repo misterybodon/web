@@ -22,7 +22,9 @@ Clone the project running
 git clone https://github.com/misterybodon/web
 ```
 
-Run `npm i` to install dev dependencies.
+Run 
+```npm i``` 
+to install dev dependencies.
 
 `npm run watcher` will start watching for any change in the `/source` directory.
 
