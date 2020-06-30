@@ -13,4 +13,23 @@ The gate to the website is on index.html and the actual website files are under 
 
 Pictures, text and code, for good or bad, are my own contribution.
 
- 
+
+## How to edit the code
+
+Clone the project running 
+
+```
+git clone https://github.com/misterybodon/web
+```
+
+Run `npm i` to install dev dependencies.
+
+`npm run watcher` will start watching for any change in the `/source` directory.
+
+`npm run server` will reload `/dist/index.html` when there is any modification in 
+the distribution folder.
+
+Both applications (gulp-cli and live-server are supposed to be globally installed).
+
+For specific options on running the watcher (gulp) look into `gulpfile.js`
+

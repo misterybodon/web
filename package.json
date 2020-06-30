@@ -4,7 +4,8 @@
   "description": "Thoughts and Ideas of a Stereotype",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "watcher": "gulp",
+      "server":"live-server --watch=./dist"
   },
   "repository": {
     "type": "git",

@@ -9,6 +9,7 @@ sass.compiler = require('sass')
 const imagemin = require('gulp-imagemin')
 const clean = require('gulp-clean')
 const rename = require('gulp-rename')
+//as python 'require' is equivalent to the code pasted in this file.
 
 //project files and folders
 const project = {
@@ -31,8 +32,9 @@ const project = {
     dist:'dist/',
     source:'source/',
 }
-//copy project to dist folder.
-const copyTask = parallel(cpJs, cpHtml, scssTask);
+const copyTask = parallel(cpJs, cpHtml, scssTask); 
+//parallel is a function defined in gulp like src, dest and series.
+
 
 function cpHtml() {
     //copy html files from source to dist.
