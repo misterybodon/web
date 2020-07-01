@@ -37,9 +37,7 @@ padding: 0px 0.8rem;
 }
 
 
-@supports(writing-mode:sideways-rl){
-/*overwrite decoration underline*/
-a.class1:hover{text-decoration:none;}
+.class1:hover{text-decoration:none;}
 a.class1::before, a.class1::after{
 content:'';
 position:absolute;
@@ -53,14 +51,12 @@ background-image:linear-gradient(to right, rgba(#222,0.2), rgba(#ddd,0.2));
 left:0;
 }
 a.class1::before{
-writing-mode:sideways-rl;
 right:0;
 background-image:linear-gradient(to left, rgba(#222,0.2), rgba(#ddd,0.2));
 }
 a.class1:hover::before,
 a.class1:hover::after{
 width:50%;
-}
 }
 
 
