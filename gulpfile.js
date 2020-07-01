@@ -13,21 +13,22 @@ const concat = require('gulp-concat')
 const filter = require('gulp-filter')
 //as python 'require' is equivalent to the code pasted in this file.
 
+
+
 //project files and folders
 const project = {
     inFile:{
-            html:'source/**/*.html',
-            mainScss: 'source/sass/index.scss',
-      //      notMainScss:'!source/sass/index.scss',
-            scss:'source/**/*.scss',
-            js:'source/js/*',
-            smoothScroll:'source/js/smoothScroll.js', 
-            img:'source/images/*'
+        html:'source/**/*.html',
+        mainScss: 'source/sass/index.scss',
+        scss:'source/**/*.scss',
+        js:'source/js/*',
+        smoothScroll:'source/js/smoothScroll.js', 
+        img:'source/images/*'
     },
     outDir:{
-            js:'dist/js/',
-            css: 'dist/css',
-            img:'dist/images'
+        js:'dist/js/',
+        css: 'dist/css',
+        img:'dist/images'
     },
     inDir:{
         img:'source/images/'
@@ -35,10 +36,8 @@ const project = {
     dist:'dist/',
     source:'source/',
 }
-const basicTask = parallel(jsTask, cpHtml, scssTask); 
-//parallel is a function defined in gulp like src, dest and series.
 
-
+//function definitions
 function cpHtml() {
     //copy html files from source to dist.
     return src(project.inFile.html)
@@ -48,10 +47,10 @@ function cpHtml() {
 function jsTask() {
     const f = filter([ project.inFile.js, `!${project.inFile.smoothScroll}`], {restore: true})
     return src(project.inFile.js)
-    .pipe(f)
-    .pipe(concat("all.js"))
-    .pipe(f.restore)
-    .pipe(dest(project.outDir.js))
+        .pipe(f)
+        .pipe(concat("all.js"))
+        .pipe(f.restore)
+        .pipe(dest(project.outDir.js))
 }
 
 //..compile the scss project to compressed, prefixed css project and copy them to dist.
@@ -106,6 +105,10 @@ function watchTask() {
             project.inFile.img], 
         parallel(basicTask, minifyImgs)
     )}
+
+const basicTask = parallel(jsTask, cpHtml, scssTask); 
+//parallel is a function defined in gulp like src, dest and series.
+
 //to run when running 'gulp' i.e the default task
 exports.onlyhtml = cpHtml 
 exports.noImage = basicTask;

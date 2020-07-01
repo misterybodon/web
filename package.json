@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/santimirandarp/mrnobody.git"
+    "url": "https://github.com/misterybodon/web"
   },
   "keywords": [],
-  "author": "santiago miranda",
+  "author": "Mister Nobody",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/santimirandarp/mrnobody/issues"
+    "url": "https://github.com/misterybodon/web/issues"
   },
-  "homepage": "https://github.com/santimirandarp/mrnobody#readme",
+  "homepage": "https://github.com/misterybodon",
   "devDependencies": {
     "fibers": "^4.0.3",
     "gulp": "^4.0.2",

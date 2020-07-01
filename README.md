@@ -35,3 +35,11 @@ Both applications (gulp-cli and live-server are supposed to be globally installe
 
 For specific options on running the watcher (gulp) look into `gulpfile.js`
 
+### Adding a post
+
+1. Posts updates are semi-automatic. To create a new post create a folder named "postN" where N is replaced 
+with the correspondent number. If the last one is "post2", just create the folder "post3." 
+2. To set up the blog post, the easiest way is to copy "template" folder content into the new directory.
+3. Next an entry should be created in the "posts" objects under the source/js folder, following simple rules.
+4. Now the "New Posts" will be updated in all the files, with the corresponding new entry.
+
