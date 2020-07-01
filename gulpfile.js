@@ -9,6 +9,8 @@ sass.compiler = require('sass')
 const imagemin = require('gulp-imagemin')
 const clean = require('gulp-clean')
 const rename = require('gulp-rename')
+const concat = require('gulp-concat')
+const filter = require('gulp-filter')
 //as python 'require' is equivalent to the code pasted in this file.
 
 //project files and folders
@@ -16,9 +18,10 @@ const project = {
     inFile:{
             html:'source/**/*.html',
             mainScss: 'source/sass/index.scss',
-            notMainScss:'!source/sass/index.scss',
+      //      notMainScss:'!source/sass/index.scss',
             scss:'source/**/*.scss',
             js:'source/js/*',
+            smoothScroll:'source/js/smoothScroll.js', 
             img:'source/images/*'
     },
     outDir:{
@@ -32,7 +35,7 @@ const project = {
     dist:'dist/',
     source:'source/',
 }
-const copyTask = parallel(cpJs, cpHtml, scssTask); 
+const copyTask = parallel(jsTask, cpHtml, scssTask); 
 //parallel is a function defined in gulp like src, dest and series.
 
 
@@ -42,9 +45,13 @@ function cpHtml() {
         .pipe(dest(project.dist))
 }
 
-function cpJs() {
-    return src(`${project.inFile.js}`)
-        .pipe(dest(`${project.outDir.js}`))
+function jsTask() {
+    const f = filter([ project.inFile.js, `!${project.inFile.smoothScroll}`], {restore: true})
+    return src(project.inFile.js)
+    .pipe(f)
+    .pipe(concat("all.js"))
+    .pipe(f.restore)
+    .pipe(dest(project.outDir.js))
 }
 
 //..compile the scss project to compressed, prefixed css project and copy them to dist.
@@ -64,7 +71,7 @@ function mainScss(){
 }
 //post stands for posts, for each blog post, not for post processing.
 function scss(){
-    return src([project.inFile.scss,project.inFile.notMainScss])
+    return src([project.inFile.scss,`!${project.inFile.MainScss}`])
         .pipe(sourcemaps.init())
         .pipe(sass({ fiber: Fiber, outputStyle: 'compressed' }))
         .pipe(postcss([autoprefixer()]))
