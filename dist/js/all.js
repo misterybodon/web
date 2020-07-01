@@ -63,5 +63,6 @@ const updatePosts = (posts) => {
     `
 
     }
+    return 1
 }
     updatePosts(posts)

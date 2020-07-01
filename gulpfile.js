@@ -3,9 +3,9 @@ const { src, dest, watch, series, parallel } = require('gulp')
 const postcss = require('gulp-postcss')
 const autoprefixer = require('autoprefixer')
 const sass = require('gulp-sass')
+sass.compiler = require('sass')
 const Fiber = require('fibers')
 const sourcemaps = require('gulp-sourcemaps')
-sass.compiler = require('sass')
 const imagemin = require('gulp-imagemin')
 const clean = require('gulp-clean')
 const rename = require('gulp-rename')
@@ -35,7 +35,7 @@ const project = {
     dist:'dist/',
     source:'source/',
 }
-const copyTask = parallel(jsTask, cpHtml, scssTask); 
+const basicTask = parallel(jsTask, cpHtml, scssTask); 
 //parallel is a function defined in gulp like src, dest and series.
 
 
@@ -104,14 +104,13 @@ function watchTask() {
             project.inFile.html, 
             project.inFile.js,
             project.inFile.img], 
-        parallel(copyTask, minifyImgs)
+        parallel(basicTask, minifyImgs)
     )}
 //to run when running 'gulp' i.e the default task
 exports.onlyhtml = cpHtml 
-exports.noImage = copyTask;
+exports.noImage = basicTask;
 exports.onlyImage = minifyImgs;
-exports.default = series(parallel(copyTask, minifyImgs), watchTask)
-
+exports.default = series(parallel(basicTask, minifyImgs), watchTask)
 // TODOS
 //checkout next.js on npm 
 //add uglify for javascript.

@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/santimirandarp/mrnobody#readme",
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
     "fibers": "^4.0.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
@@ -33,10 +32,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "imagemin": "^7.0.1",
-    "node-sass": "^4.14.1",
     "sass": "^1.26.9"
   },
-  "dependencies": {
-    "lodash": "^4.17.15"
-  }
+  "dependencies": {}
 }
