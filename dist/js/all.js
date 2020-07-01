@@ -31,51 +31,37 @@ hamburger.onclick = clickBurger
 
 const posts = 
     [
+       {
+            title:"Pink Floyd Cover", 
+            publishIn:"May 24th, 2020", 
+            filename:"wywh.html"
+        },
         {
             title:"Thoughts on Web Dev", 
             publishIn:"May 16th, 2020", 
             filename:"webdev.html" 
-        },
-        {
-            title:"Pink Floyd Cover", 
-            publishIn:"May 24th, 2020", 
-            filename:"wywh.html"
         }
+        
     ]
 
+//last posts first in the object.
 
-function updatePosts(posts){
-    let ulPosts = document.getElementsByClassName("newposts")[0].getElementsByTagName("ul")[0]
-    ulPosts.innerHTML=""
+const updatePosts = (posts) => {    
+    //ul is a general name but will be function scoped.
+    let ul = document.getElementsByClassName("newposts")[0].getElementsByTagName("ul")[0]
+    ul.innerHTML=""
     let setStartDir=".."
-    if(window.location.pathname.includes("dist/index.html")){
+    if(window.location.pathname.endsWith("dist/index.html")){
         setStartDir="."
     }
-    if (posts.length>=4){
-        //we don't want more than 4 'new posts' in the list.
-        //posts to be ordered from newer to older.
-        for(let index=post.length-1; index>posts.length-5; index--)
-
-        {
-            ul.innerHTML += `
-    <li><a href="${setStartDir}/post${index+1}/${posts[index].filename}">
-    ${posts[index].publishIn}: ${posts[index].title}
+    for (let i=0; i<5 && i<posts.length; i++)
+    {       
+    ul.innerHTML += `
+    <li><a href="${setStartDir}/post${posts.length - i}/${posts[i].filename}">
+    ${posts[i].publishIn}: ${posts[i].title}
     </a></li>\n
     `
-        }
-)
-    }
-    else (posts.length<=3){
-        posts.forEach( (item, index) =>
-            {
-                    ul.innerHTML += `
-    <li><a href="${setStartDir}/post${index+1}/${posts[index].filename}">
-    ${posts[index].publishIn}: ${posts[index].title}
-    </a></li>\n
-    `
-            }
-        )
 
     }
-
+}
     updatePosts(posts)
