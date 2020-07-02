@@ -37,7 +37,7 @@ const posts =
             filename:"wywh.html"
         },
         {
-            title:"Thoughts on Web Dev", 
+            title:"Thoughts", 
             publishIn:"May 16th, 2020", 
             filename:"webdev.html" 
         }
@@ -52,7 +52,7 @@ const updatePosts = (posts) => {
     ul.innerHTML=""
     let setStartDir=".."
     if(window.location.pathname.endsWith("dist/index.html")){
-        setStartDir="."
+        setStartDir=."
     }
     for (let i=0; i<5 && i<posts.length; i++)
     {       
