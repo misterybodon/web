@@ -37,7 +37,7 @@ const posts =
             filename:"wywh.html"
         },
         {
-            title:"Thoughts", 
+            title:"Thoughts on Web Dev", 
             publishIn:"May 16th, 2020", 
             filename:"webdev.html" 
         }
