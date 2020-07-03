@@ -3,12 +3,12 @@ const posts =
        {
             title:"Pink Floyd Cover", 
             publishIn:"May 24th, 2020", 
-            filename:"wywh.html"
+            folder:"post2" //this isn't strictly necessary.
         },
         {
             title:"Thoughts on Web Dev", 
             publishIn:"May 16th, 2020", 
-            filename:"webdev.html" 
+            folder:"post1" //this isn't strictly necessary.
         }
         
     ]
