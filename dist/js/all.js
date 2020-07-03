@@ -51,7 +51,7 @@ const updatePosts = (posts) => {
     let ul = document.getElementsByClassName("newposts")[0].getElementsByTagName("ul")[0]
     ul.innerHTML=""
     let setStartDir=".."
-    if(window.location.pathname.endsWith("dist/index.html")){
+    if(window.location.pathname.endsWith("dist/")){
         setStartDir="."
     }
     for (let i=0; i<5 && i<posts.length; i++)
