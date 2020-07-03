@@ -20,8 +20,8 @@ const updatePosts = (posts) => {
     let ul = document.getElementsByClassName("newposts")[0].getElementsByTagName("ul")[0]
     ul.innerHTML=""
     let setStartDir=".."
-    if(window.location.pathname.endsWith("dist/index.html")){
-        setStartDir=."
+   if(window.location.pathname.endsWith("dist/")){
+        setStartDir="."
     }
     for (let i=0; i<5 && i<posts.length; i++)
     {       
@@ -30,7 +30,6 @@ const updatePosts = (posts) => {
     ${posts[i].publishIn}: ${posts[i].title}
     </a></li>\n
     `
-
     }
     return 1
 }
