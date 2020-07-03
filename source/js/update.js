@@ -26,7 +26,7 @@ const updatePosts = (posts) => {
     for (let i=0; i<5 && i<posts.length; i++)
     {       
     ul.innerHTML += `
-    <li><a href="${setStartDir}/post${posts.length - i}/${posts[i].filename}">
+    <li><a href="${setStartDir}/post${posts.length - i}/">
     ${posts[i].publishIn}: ${posts[i].title}
     </a></li>\n
     `
