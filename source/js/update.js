@@ -21,7 +21,7 @@ const updatePosts = (posts) => {
     ul.innerHTML=""
     let setStartDir=".."
     if(window.location.pathname.endsWith("dist/index.html")){
-        setStartDir="."
+        setStartDir="./dist"
     }
     for (let i=0; i<5 && i<posts.length; i++)
     {       
