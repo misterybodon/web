@@ -1,22 +1,38 @@
 .header > .showcase__h1{
-text-align:center;
+    text-align:center;
 top:75%}
 
 @media screen and (min-width:350px){
 
-.header > .showcase__h1 {
-top:80%;
-}
+    .header > .showcase__h1 {
+        top:80%;
+    }
 }
 @media screen and (min-width:750px){
 
-  .header > .showcase__h1 {
-    top: 50%;
-    left:30%;
-text-align:left;
-  }
+    .header > .showcase__h1 {
+        top: 50%;
+        left:30%;
+        text-align:left;
+    }
 }
+
+
 @media screen and (min-width:900px){
-  .body{box-shadow:1px 1px 3px rgba(255, 255, 255, 0.5);
-  }
+    .body{box-shadow:1px 1px 3px rgba(255, 255, 255, 0.5);
+    }
+
+
+    @supports(writing-mode:sideways-lr){
+        article > section:first-child > h2 {
+            writing-mode: sideways-lr;
+            float: left;
+            margin: -1rem 1rem 1.5rem;
+        }
+        .whitman__pic {
+            clip-path: circle(172px at center center);
+        }
+
+    }
+
 }

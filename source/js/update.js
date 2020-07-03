@@ -30,7 +30,6 @@ const updatePosts = (posts) => {
     ${posts[i].publishIn}: ${posts[i].title}
     </a></li>\n
     `
-
     }
 }
     updatePosts(posts)
