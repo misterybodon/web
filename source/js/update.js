@@ -1,5 +1,9 @@
-const posts = 
-    [
+const posts = [
+        {
+            title:"The Concept of Temperature",
+            publishIn:"July 6th, 2020",
+            folder:"post3"
+        },
        {
             title:"Pink Floyd Cover", 
             publishIn:"May 24th, 2020", 
