@@ -1,0 +1,14 @@
+@use '../sass/resets';
+@use '../sass/variables';
+@use '../sass/fonts';
+@use '../sass/hamburger';
+@use '../sass/article';
+@use '../sass/toTopButton';
+@use '../sass/newPosts';
+@use '../sass/footer';
+@use '../sass/orphans';//selectors not fitting in any previous category.
+@use '../sass/header';
+@use '../sass/wholePage';
+@use '../postsass/generalGrid';
+@use '../postsass/postorphans';
+@use './pre';
