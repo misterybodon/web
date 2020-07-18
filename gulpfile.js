@@ -21,12 +21,13 @@ const project = {
         html:'source/**/*.html',
         mainScss: 'source/sass/index.scss',
         scss:'source/**/*.scss',
-        js:'source/js/*',
+        js:'source/**/*.js',
         smoothScroll:'source/js/smoothScroll.js', 
+        p5js:'source/js/p5.min.js',
         img:'source/images/*'
     },
     outDir:{
-        js:'dist/js/',
+        js:'dist/',
         css: 'dist/css',
         img:'dist/images'
     },
@@ -45,7 +46,7 @@ function cpHtml() {
 }
 
 function jsTask() {
-    const f = filter([ project.inFile.js, `!${project.inFile.smoothScroll}`], {restore: true})
+    const f = filter([ project.inFile.js, `!${project.inFile.smoothScroll}`, `!${project.inFile.p5js}`], {restore: true})
     return src(project.inFile.js)
         .pipe(f)
         .pipe(concat("all.js"))

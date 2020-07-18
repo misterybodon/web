@@ -49,7 +49,7 @@
                     <section>
                         <h2>The p5.js Project</h2>
                         <p>Besides being a javascript library, <a href="https://p5js.org/">p5.js is a community project</a>, and it's open source. They receive support from the processing foundation, which is supported by donations of users and people interested in the project. I'd like to quote a short sentence from the home page linked above:</p>
-                        <blockquote cite="https://p5js.org/">
+                        <blockquote class="p5jsBlockquote" cite="https://p5js.org/">
                             We are all learners.
                         </blockquote>
                         <h2>The p5.js Library</h2>
@@ -136,27 +136,9 @@ function draw(){ }
 <button class="runCode__stop">Stop</button>
 <button class="runCode__refresh">Refresh</button>
 </div>
-<pre class="runCode__output">
-<code> 
-function setup(){ 
+<iframe id="exampleFrame" src="example.html" style="height: 400px;">
 
-let x=200, y=180;
-createCanvas(x,y, WEBGL) 
-background(51, 25, 128) 
-box(15, 15, 15) 
-stroke("red")
-fill(255,0,0, 60)
-rect(0,0,60,40)
-stroke("#00FF00")
-fill(0,255,0, 40)
-// noStroke() 
-rect(30, 30, 60, 40);  
-
-}
-
-function draw(){ }
-</code>
-</pre>
+</iframe>
 </div>
 <p>Many conclusions can be drawn out of this example. First, there are many ways to specify colors. For starters we can stick to one. The most general of those is rgba, so we'll mostly use that one. These are all properties taking color as an argument:
 </p>

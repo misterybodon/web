@@ -1,3 +1,4 @@
+//next declaration is for very small phones
 .article p {
   text-align:left;
 }
@@ -6,6 +7,6 @@
   text-align: justify;
 }
 }
-.article > section:first-child > h2{
-margin-top:0;}
+//this declaration is only for the home page
+.article__clarifications > h2{margin-top:0;}
 
