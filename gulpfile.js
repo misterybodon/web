@@ -21,9 +21,9 @@ const project = {
         html:'source/**/*.html',
         mainScss: 'source/sass/index.scss',
         scss:'source/**/*.scss',
+        vendorjs:'source/js/*.js',
+        sketchjs:'source/**/sketch/*.js',
         js:'source/**/*.js',
-        smoothScroll:'source/js/smoothScroll.js', 
-        p5js:'source/js/p5.min.js',
         img:'source/images/*'
     },
     outDir:{
@@ -45,12 +45,15 @@ function cpHtml() {
         .pipe(dest(project.dist))
 }
 
-function jsTask() {
-    const f = filter([ project.inFile.js, `!${project.inFile.smoothScroll}`, `!${project.inFile.p5js}`], {restore: true})
-    return src(project.inFile.js)
-        .pipe(f)
+function jsOnlyCopy() {
+    return src(project.inFile.sketchjs)
+        .pipe(dest(project.dist))
+}
+
+
+function jsConcat() {
+    return src([project.inFile.js, `!${project.inFile.vendorjs}`, `!${project.inFile.sketchjs}`])
         .pipe(concat("all.js"))
-        .pipe(f.restore)
         .pipe(dest(project.outDir.js))
 }
 
@@ -107,7 +110,7 @@ function watchTask() {
         parallel(basicTask, minifyImgs)
     )}
 
-const basicTask = parallel(jsTask, cpHtml, scssTask); 
+const basicTask = parallel(jsConcat, jsOnlyCopy, cpHtml, scssTask); 
 //parallel is a function defined in gulp like src, dest and series.
 
 //to run when running 'gulp' i.e the default task
