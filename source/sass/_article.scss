@@ -1,11 +1,11 @@
-article p {
+.article p {
   text-align:left;
 }
 @media screen and (min-width:400px){
-article p {
+.article p {
   text-align: justify;
 }
 }
-article > section:first-child > h2{
+.article > section:first-child > h2{
 margin-top:0;}
 

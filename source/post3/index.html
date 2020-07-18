@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-UK">
+<html lang="en">
     <head>
         <meta charset="utf-8" />
         <meta name="description" content="The Ramblings of Mr. Nobody" />
@@ -14,7 +14,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16-min.png"/>
         <link rel="manifest" href="../images/site.webmanifest-min"/>
         <!--bring over the fonts from google -->
-        <link href="https://fonts.googleapis.com/css?family=Sancreek|Balthazar&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Sancreek%7CBalthazar&display=swap" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="./index.css" />
         <!--social media icons from 
             https://simpleicons.org/ -->
@@ -22,12 +22,12 @@
 
     <body>
         <div class="wholePage">
-            <section class="wholePage__getInvolved">
+            <div class="wholePage__getInvolved">
                 <a href="https://paypal.me/misterybodon">Donate</a>
                 <a href="https://github.com/misterybodon/web">Contribute</a>
-            </section>
+            </div>
 
-            <section class="body wholePage__body">
+            <div class="body wholePage__body">
                 <header id='top' class="header">
                     <nav class="navbar">
                         <div class="hamburger" id="hamburger" >
@@ -43,10 +43,10 @@
                     </nav>
                     <h1 id="showcase__h1" class="showcase__h1">The Ramblings<br/> of <br/>Mr. Nobody</h1>
                     <p class="topTagLine">May 16th, 2020: Opening.</p>
-                    <img class="header__showcaseimg" src="../images/about-min.jpg" type="image/jpeg" 
+                    <img class="header__showcaseimg" src="../images/about-min.jpg"
                                                                                    alt="Mr nobody methaphorically picturing his shadow, which is projected on the road. There is the shadow of an umbrella he's wearing too." />
                 </header>
-                <article class="article">
+                <div class="article">
                     <section>
                         <h2>The concept of Temperature</h2>
                         <p>
@@ -88,7 +88,7 @@
 
 
                     </section>
-                </article>
+                </div>
                 <section class="newposts">
                     <h2>New Posts</h2>
                     <ul>
@@ -97,9 +97,9 @@
                 </section>
 
                 <a id="backToTop" class="backToTop" href="#top"><img class="backToTop__img"
-                                                                     type="image/svg+xml" src="../images/right_gold-min.svg"/></a>
+                                                                     alt="arrow pointing upwards takes you to first section" src="../images/right_gold-min.svg"/></a>
 
-            </section>
+            </div>
             <!--the section finishing here wraps all content-->
             <div class="comments" id="disqus_thread"></div>
             <script>
@@ -115,31 +115,29 @@ var disqus_config = function () {
     var d = document, s = d.createElement('script');
     s.src = 'https://misterybodon.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
+    (d.head %7C| d.body).appendChild(s);
 })();
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
             <footer class="footer">
-                <ul class="footer__social">
+<ul class="footer__social">
                     <li>
                         <a href="https://lbry.tv" class="socialMedia__links library"><img class="socialLogo" src="../images/lbry-min.svg" title="link to lbry.tv, still need to create my own channel!" alt="lbry logo, link to personal account" /></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/misterybodon/" class="socialMedia__links instagram"><img class="socialLogo" src="../images/instagram-min.svg" type="image/svg+xml" title="link to instragram" alt="instagram logo, link to personal account" /></a>
+                        <a href="https://www.instagram.com/misterybodon/" class="socialMedia__links instagram"><img class="socialLogo" src="../images/instagram-min.svg" title="link to instragram" alt="instagram logo, link to personal account" /></a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/misterydobon" class="socialMedia__links twitter"><img class="socialLogo" src="../images/twitter-min.svg" type="image/svg+xml" title="link to twitter" alt="twitter logo, link to personal account" /></a>
+                        <a href="https://twitter.com/misterydobon" class="socialMedia__links twitter"><img class="socialLogo" src="../images/twitter-min.svg" title="link to twitter" alt="twitter logo, link to personal account" /></a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/channel/UCN7tB90HHqCyxXbwifu63Rg" class="socialMedia__links youtube"><img class="socialLogo" src="../images/youtube-min.svg" type="image/svg+xml" title="link to youtube"  alt="youtube logo, link to personal account"/></a>
+                        <a href="https://www.youtube.com/channel/UCN7tB90HHqCyxXbwifu63Rg" class="socialMedia__links youtube"><img class="socialLogo" src="../images/youtube-min.svg" title="link to youtube"  alt="youtube logo, link to personal account"/></a>
                     </li>
                 </ul>
-                <div class="footer__copyright">
-                    &copy; 2020 Mister Nobody.
-                </div>
+
             </footer>
-            </section>
+            </div>
             <script src="../js/all.js">
             </script>
             <script src="../js/smoothScroll.js">
