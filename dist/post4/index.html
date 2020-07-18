@@ -48,7 +48,7 @@
                 <div class="article">
                     <section>
                         <h2>The p5.js Project</h2>
-                        <p>Besides being a javascript library, <a href="https://p5js.org/">p5.js is a community open-source project</a>. They receive support from the processing foundation, which is supported by donations of users and people interested in the project. I'd like to quote a short sentence from the home page linked above:</p>
+                        <p>Besides being a javascript library, <a href="https://p5js.org/">p5.js is a community project</a>, and it's open source. They receive support from the processing foundation, which is supported by donations of users and people interested in the project. I'd like to quote a short sentence from the home page linked above:</p>
                         <blockquote cite="https://p5js.org/">
                             We are all learners.
                         </blockquote>
@@ -59,191 +59,209 @@
                         <h3>setup and draw</h3> 
                         <div class="watchCode">
                             <pre>
-                       <code>
-                        function setup() {
+   <code>
+    function setup() {  }
 
-                                 }
-
-                        function draw() {
-
-                                }
-                       </code>
+    function draw() { }
+   </code>
                             </pre>
                         </div>
                         <p>setup and draw are the two main functions of the program. In both we can write plain javascript, or use some other built-in features. setup controls static objects, draw controls the dynamic part. Once we wrote all the code in setup, this is kindof the base of our work.</p>
                         <div class="runCode">
-                            <pre>
-                       <code>
-                        function setup (){
-                        createCanvas(300, 400);
-                        background(51); // 0-255 --> greyscale.
-                        }
+<pre class="runCode__input">
+<code>
+function setup (){
+createCanvas(300, 400);
+background(51); 
+}
 
-                        function draw() {
+function draw() { }
+</code>
+</pre>
+<div class="buttons">
+<button class="runCode__run">Run</button>
+<button class="runCode__stop">Stop</button>
+<button class="runCode__refresh">Refresh</button>
+</div>
 
-                        }
-                       </code>
-                            </pre>
-                            <div class="buttons">
-                                <button class="runCode__run">Run</button>
-                                <button class="runCode__stop">Stop</button>
-                                <button class="runCode__refresh">Refresh</button>
-                            </div>
-                            <div class="runCode__result">
-                            </div>
+<pre class="runCode__output">
+<code>
+function setup (){
+createCanvas(300, 400);
+background(51); 
+}
 
-                        </div>
-                        <p>If we know nothing of programming, the words are telling us: 
-                        </p>
-                        <ol>
-                            <li>create a canvas 300pixels horizontal, 400pixels vertical; </li>
-                            <li>background(51) is background's color in greyscale, 0 being black, 255 being white.</li>
-                        </ol>
-                        <h3>Try the code yourself</h3>
+function draw() { }
+</code>
+</pre>
 
-                        <p>You can copy and paste the code <a href="https://editor.p5js.org/">p5.js editor</a>, to play with it.</p>
+</div>
+<p>If we know nothing of programming, the words are telling us: 
+</p>
+<ol>
+<li>create a canvas 300pixels horizontal, 400pixels vertical; </li>
+<li>background(51) is background's color in greyscale, 0 being black, 255 being white.</li>
+</ol>
+<h3>Try the code yourself</h3>
 
-                        <h3>Shapes</h3>
-                        <p>p5.js comes with tools for easy drawing shapes. We can draw rectangles, ellipses, cubes and many more. Let's go ahead and draw a couple of shapes here and there. All of them will be part of our Bob Ross-like static canvas.
-                        </p>
-                        <div class="runCode">
-                            <pre>
-                       <code> 
-                    function setup(){ 
+<p>You can copy and paste the code <a href="https://editor.p5js.org/">p5.js editor</a>, to play with it.</p>
 
-                       let x=200, y=180;
-                       createCanvas(x,y, WEBGL); //We need WEBGL for 3D-like shapes
-                       background(51, 25, 128); //rgb values.
-                       box(15, 15, 15) 
-                       stroke("red"); //string color values
-                       fill(255,0,0, 60) //rgba. The last num is %opacity.
-                       rect(0,0,60,40);
+<h3>Shapes</h3>
+<p>p5.js comes with tools for easy drawing shapes. We can draw rectangles, ellipses, cubes and many more. Let's go ahead and draw a couple of shapes here and there. All of them will be part of our Bob Ross-like static canvas.
+</p>
+<div class="runCode">
+<pre class="runCode__input">
+<code> 
+function setup(){ 
 
-                       stroke("#00FF00")//green hex value
-                       fill(0,255,0, 40)
-                       // noStroke() removes borderline (black by default), 
-                       //but it looks ugly, so I commented it out.
-                       rect(30, 30, 60, 40);  
+let x=200, y=180;
+createCanvas(x,y, WEBGL) 
+background(51, 25, 128) 
+box(15, 15, 15) 
+stroke("red")
+fill(255,0,0, 60)
+rect(0,0,60,40)
+stroke("#00FF00")
+fill(0,255,0, 40)
+// noStroke() 
+rect(30, 30, 60, 40);  
 
-                       }
+}
 
-                       function draw(){
+function draw(){ }
+</code>
+</pre>
+<div class="buttons">
+<button class="runCode__run">Run</button>
+<button class="runCode__stop">Stop</button>
+<button class="runCode__refresh">Refresh</button>
+</div>
+<pre class="runCode__output">
+<code> 
+function setup(){ 
 
-                       }
-                       </code>
-                            </pre>
-                            <div class="buttons">
-                                <button class="runCode__run">Run</button>
-                                <button class="runCode__stop">Stop</button>
-                                <button class="runCode__refresh">Refresh</button>
-                            </div>
-                            <div class="runCode__result">
-                            </div>
-                        </div>
-                        <p>Many conclusions can be drawn out of this example. First, there are many ways to specify colors. For starters we can stick to one. The most general of those is rgba, so we'll mostly use that one. These are all properties taking color as an argument:
-                        </p>
+let x=200, y=180;
+createCanvas(x,y, WEBGL) 
+background(51, 25, 128) 
+box(15, 15, 15) 
+stroke("red")
+fill(255,0,0, 60)
+rect(0,0,60,40)
+stroke("#00FF00")
+fill(0,255,0, 40)
+// noStroke() 
+rect(30, 30, 60, 40);  
 
-                        <ul class="color">
-                            <li>background()</li>
-                            <li>fill()</li>
-                            <li>stroke()</li>
-                        </ul>
+}
 
-                        they are self explanatory.
-                        <p>
-                        By default shapes are filled up with white. Some functions like fill, stroke, noStroke only affect 
-                        the code coming next, which is very handy. (the correct capitalization in the name is essential). 
-                        </p>
-                        <p>
-                        Rectangles' left corner is by default on page's center. The function takes 4 values; first 2 being the left corner's distance from the center, the other 2 are width and height. We'll see how to change this behaviour to a more intuitive one later.
-                        </p>
-                        <p>
-                        On the other hand, Cubes take only 3 values but they start from the center (and split evenly).
-                        </p>
-                        <p>Last but not least, we can use the <em>noThis</em> functions, named in <a href="" class="camelcase__link">camelCase way</a>. As most of the other functions, they will only affect subsequent code. An example is
-                        noStroke function. There are noFill, noErase, and probably many more.</p>
+function draw(){ }
+</code>
+</pre>
+</div>
+<p>Many conclusions can be drawn out of this example. First, there are many ways to specify colors. For starters we can stick to one. The most general of those is rgba, so we'll mostly use that one. These are all properties taking color as an argument:
+</p>
 
-                        <h3>Where do I take all this data from</h3>
-                        <p>All libraries should have a page explaining how are we supposed to use it. And so has p5.js; there is a <a href="https://p5js.org/reference/" >reference page</a>, 
-                        that we will consult to understand what arguments can we pass to the functions, and are they supposed to do, and to 
-                        grab examples!</p>
+<ul class="color">
+<li>background()</li>
+<li>fill()</li>
+<li>stroke()</li>
+</ul>
 
-                        <h3>What we know now</h3>
-                        <ul>
-                            <li>there are 2 main functions: setup and draw.</li>
-                            <li>the static pieces are specified in setup, dynamics in draw.</li>
-                            <li>background, fill, stroke take a color as argument.</li>
-                            <li>Functions affect only subsequent code</li>
-                            <li>We can draw many shapes.</li>
-                            <li>We can consult the <a href="https://p5js.org/reference/" >reference page for p5 library.</a></li>
-                        </ul>
-                        <p>Alright so now let's so some nice draw!</p>
+they are self explanatory.
+<p>
+By default shapes are filled up with white. Some functions like fill, stroke, noStroke only affect 
+the code coming next, which is very handy. (the correct capitalization in the name is essential). 
+</p>
+<p>
+Rectangles' left corner is by default on page's center. The function takes 4 values; first 2 being the left corner's distance from the center, the other 2 are width and height. We'll see how to change this behaviour to a more intuitive one later.
+</p>
+<p>
+On the other hand, Cubes take only 3 values but they start from the center (and split evenly).
+</p>
+<p>Last but not least, we can use the <em>noThis</em> functions, named in <a href="" class="camelcase__link">camelCase way</a>. As most of the other functions, they will only affect subsequent code. An example is
+noStroke function. There are noFill, noErase, and probably many more.</p>
 
-                        <h3>A real-life example</h3>
+<h3>Where do I take all this data from</h3>
+<p>All libraries should have a page explaining how are we supposed to use it. And so has p5.js; there is a <a href="https://p5js.org/reference/" >reference page</a>, 
+that we will consult to understand what arguments can we pass to the functions, and are they supposed to do, and to 
+grab examples!</p>
+
+<h3>What we know now</h3>
+<ul>
+<li>there are 2 main functions: setup and draw.</li>
+<li>the static pieces are specified in setup, dynamics in draw.</li>
+<li>background, fill, stroke take a color as argument.</li>
+<li>Functions affect only subsequent code</li>
+<li>We can draw many shapes.</li>
+<li>We can consult the <a href="https://p5js.org/reference/" >reference page for p5 library.</a></li>
+</ul>
+<p>Alright so now let's so some nice draw!</p>
+
+<h3>A real-life example</h3>
 
 
-                    </section>
-                </div>
-                <section class="newposts">
-                    <h2>New Posts</h2>
-                    <ul>
-                        <!--this area will be filled with the script-->
-                    </ul>
-                </section>
+</section>
+</div>
+<section class="newposts">
+<h2>New Posts</h2>
+<ul>
+<!--this area will be filled with the script-->
+</ul>
+</section>
 
-                <a id="backToTop" class="backToTop" href="#top"><img alt="arrow back to Top" class="backToTop__img"
-                                                                                             src="../images/right_gold-min.svg"/></a>
+<a id="backToTop" class="backToTop" href="#top"><img alt="arrow back to Top" class="backToTop__img"
+                                                     src="../images/right_gold-min.svg"/></a>
 
-            </div>
-            <!--the section finishing here wraps all content(body wholepage)-->
-            <div class="comments" id="disqus_thread"></div>
-            <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-                var disqus_config = function () {
-                    this.page.url = "https://misterybodon.github.io/web/dist/post3/index.html"  // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = "post3"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
+</div>
+<!--the section finishing here wraps all content(body wholepage)-->
+<div class="comments" id="disqus_thread"></div>
+<script>
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+this.page.url = "https://misterybodon.github.io/web/dist/post3/index.html"  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "post3"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
 
-                (function() { // DON'T EDIT BELOW THIS LINE
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://misterybodon.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://misterybodon.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head %7C| d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-            <footer class="footer">
-                <ul class="footer__social">
-                    <li>
-                        <a href="https://lbry.tv" class="socialMedia__links library"><img class="socialLogo" src="../images/lbry-min.svg" title="link to lbry.tv, still need to create my own channel!" alt="lbry logo, link to personal account" /></a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/misterybodon/" class="socialMedia__links instagram"><img class="socialLogo" src="../images/instagram-min.svg" title="link to instragram" alt="instagram logo, link to personal account" /></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/misterydobon" class="socialMedia__links twitter"><img class="socialLogo" src="../images/twitter-min.svg" title="link to twitter" alt="twitter logo, link to personal account" /></a>
-                    </li>
-                    <li>
-                        <a href="https://www.youtube.com/channel/UCN7tB90HHqCyxXbwifu63Rg" class="socialMedia__links youtube"><img class="socialLogo" src="../images/youtube-min.svg" title="link to youtube"  alt="youtube logo, link to personal account"/></a>
-                    </li>
-                </ul>
-                <div class="footer__copyright">
-                    &copy; 2020 Mister Nobody.
-                </div>
-            </footer>
-            <script src="../js/all.js">
-            </script>
-            <script src="../js/p5.js">
-            </script>
-            <script src="../js/smoothScroll.js">
-            </script>
-            <script>
-                var scroll = new SmoothScroll('a[href*="#"]'); 
-            </script>
-        </div>
-    </body>
+<footer class="footer">
+<ul class="footer__social">
+<li>
+<a href="https://lbry.tv" class="socialMedia__links library"><img class="socialLogo" src="../images/lbry-min.svg" title="link to lbry.tv, still need to create my own channel!" alt="lbry logo, link to personal account" /></a>
+</li>
+<li>
+<a href="https://www.instagram.com/misterybodon/" class="socialMedia__links instagram"><img class="socialLogo" src="../images/instagram-min.svg" title="link to instragram" alt="instagram logo, link to personal account" /></a>
+</li>
+<li>
+<a href="https://twitter.com/misterydobon" class="socialMedia__links twitter"><img class="socialLogo" src="../images/twitter-min.svg" title="link to twitter" alt="twitter logo, link to personal account" /></a>
+</li>
+<li>
+<a href="https://www.youtube.com/channel/UCN7tB90HHqCyxXbwifu63Rg" class="socialMedia__links youtube"><img class="socialLogo" src="../images/youtube-min.svg" title="link to youtube"  alt="youtube logo, link to personal account"/></a>
+</li>
+</ul>
+<div class="footer__copyright">
+&copy; 2020 Mister Nobody.
+</div>
+</footer>
+<script src="../js/all.js">
+</script>
+<script src="../js/p5.js">
+</script>
+<script src="../js/smoothScroll.js">
+</script>
+<script>
+var scroll = new SmoothScroll('a[href*="#"]'); 
+</script>
+</div>
+</body>
 
 </html>
