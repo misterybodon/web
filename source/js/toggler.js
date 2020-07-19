@@ -21,13 +21,25 @@ p5Frames = [
                 {
                     id:"p5IFrame1", 
                     source:"./sketch/p5IFrame1.html", 
-                    blackCanvas:"./sketch/black1.html",
+                    blackCanvas:"./sketch/black3.html",
                     sourcePhones:"./sketch/phones/p5IFrame1.html",
-                    blackCanvasPhones:"./sketch/phones/black1.html"
+                    blackCanvasPhones:"./sketch/phones/black3.html"
                 }, 
-                {id:"p5IFrame2", source:"./sketch/p5IFrame2.html"}, 
-                {id:"p5IFrame3", source:"./sketch/p5IFrame3.html"}, 
-           ]
+                {
+                    id:"p5IFrame2", 
+                    source:"./sketch/p5IFrame2.html", 
+                    blackCanvas:"./sketch/black3.html",
+                    sourcePhones:"./sketch/phones/p5IFrame2.html",
+                    blackCanvasPhones:"./sketch/phones/black3.html"
+                }, 
+                {
+                    id:"p5IFrame3", 
+                    source:"./sketch/p5IFrame3.html", 
+                    blackCanvas:"./sketch/black3.html",
+                    sourcePhones:"./sketch/phones/p5IFrame3.html",
+                    blackCanvasPhones:"./sketch/phones/black3.html"
+                } 
+          ]
 //listens for a click on a button tag
 window.onclick = e => {
    e.target.tagName == "BUTTON"

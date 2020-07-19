@@ -1,5 +1,4 @@
-//Canvas Text-filler
-
+//Canvas Text-filler 
 //VARIABLES
 //canvas dimensions
 let x=600, y=500;

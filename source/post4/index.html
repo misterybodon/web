@@ -60,7 +60,7 @@
                         <div class="watchCode">
                             <pre>
    <code>
-    function setup() {  }
+    function setup() { }
 
     function draw() { }
    </code>
@@ -122,13 +122,13 @@ rect(30, 30, 60, 40);
 function draw(){ }
 </code>
 </pre>
-<iframe id="p5IFrame2" style="height: 400px;">
-
-</iframe>
 <div class="runCode__buttons">
 <button class="runCode__run">Run</button>
 <button class="runCode__stop">Stop</button>
 </div>
+<iframe id="p5IFrame2" class="runCode__iframe" >
+
+</iframe>
 </div>
 <p>Many conclusions can be drawn out of this example. First, there are many ways to specify colors. For starters we can stick to one. The most general of those is rgba, so we'll mostly use that one. These are all properties taking color as an argument:
 </p>
@@ -169,7 +169,53 @@ grab examples!</p>
 </ul>
 <p>Alright so now let's so some nice draw!</p>
 
-<h3>A real-life example</h3>
+<h3>A more complex example</h3>
+<div class="runCode">
+<pre class="runCode__input">
+<code>
+let x=600, y=500;
+let fontI, fontM
+let randomSize
+let myXval=x, myYval=y;
+let fillString
+let myColors = {"brown": [255,225,25,100]}
+
+let fillWithText = (
+    x=myXval, 
+    y=myYval, 
+    fontI=10,
+    fontM=32,
+    fillString="Hello World!") => {
+
+randomX = random(x)
+randomY = random(y)
+randomSize = random(fontI, fontM)
+textAlign(CENTER,CENTER)
+textSize(randomSize)
+fill(...myColors.brown)
+text(fillString, randomX, randomY)
+
+}
+
+function setup() {
+createCanvas(x, y)
+background(0)
+frameRate(10);
+}
+function draw(){
+fillWithText()
+}
+</code>
+</pre>
+<div class="runCode__buttons">
+<button class="runCode__run">Run</button>
+<button class="runCode__stop">Stop</button>
+</div>
+<iframe id="p5IFrame3" class="runCode__iframe" >
+
+</iframe>
+
+</div>
 
 
 </section>
