@@ -49,12 +49,11 @@ window.onclick = e => {
     && setSource(e.target, p5Frames)
     } 
 function setSource(button, array){
-let iframe = button.parentElement.previousElementSibling;
+let iframe = button.parentElement.nextElementSibling;
 for (let i=0; i<array.length; i++){
     console.log("executing setSource")
     if(array[i].id == iframe.id){
         if(window.innerWidth<600){
-            console.log("less than 600")
                 iframe.parentElement.classList +=" runCode__smallScreen";
                 iframe.classList +=" iframe__smallScreen";
             if(button.classList[0]== "runCode__run"){
@@ -65,7 +64,6 @@ for (let i=0; i<array.length; i++){
         else{
             iframe.parentElement.classList +=" runCode__largeScreen";
             iframe.classList +=" iframe__largeScreen";
-             console.log("more than 600")
             if(button.classList[0]== "runCode__run"){
                 iframe.src = array[i].source
             }
