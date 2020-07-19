@@ -26,7 +26,7 @@ position:relative;
 .runCode{
 display:flex;
 flex-direction:column;
-> .buttons{
+> .runCode__buttons{
 @include variables.flexcenter($justify:space-around);
 background-color: variables.$hamburgerOff;
 

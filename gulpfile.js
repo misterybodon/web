@@ -21,13 +21,13 @@ const project = {
         html:'source/**/*.html',
         mainScss: 'source/sass/index.scss',
         scss:'source/**/*.scss',
-        vendorjs:'source/js/*.js',
-        sketchjs:'source/**/sketch/*.js',
+        vendorjs:'source/js/smoothScroll.js',
+        sketchjs:'source/**/sketch/**/*.js',
         js:'source/**/*.js',
         img:'source/images/*'
     },
     outDir:{
-        js:'dist/',
+        js:'dist/js/',
         css: 'dist/css',
         img:'dist/images'
     },

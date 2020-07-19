@@ -15,4 +15,47 @@ const clickBurger = () => {
 
 hamburger.onclick = clickBurger
 
+////toggler for p5 iframes
 
+p5Frames = [
+                {
+                    id:"p5IFrame1", 
+                    source:"./sketch/p5IFrame1.html", 
+                    blackCanvas:"./sketch/black1.html",
+                    sourcePhones:"./sketch/phones/p5IFrame1.html",
+                    blackCanvasPhones:"./sketch/phones/black1.html"
+                }, 
+                {id:"p5IFrame2", source:"./sketch/p5IFrame2.html"}, 
+                {id:"p5IFrame3", source:"./sketch/p5IFrame3.html"}, 
+           ]
+//listens for a click on a button tag
+window.onclick = e => {
+   e.target.tagName == "BUTTON"
+    && setSource(e.target, p5Frames)
+    } 
+
+
+function setSource(button, array){
+let iframe = button.parentElement.previousElementSibling;
+for (let i=0; i<array.length; i++){
+    console.log("executing setSource")
+    if(array[i].id == iframe.id){
+        if(window.innerWidth<600){
+            console.log("less than 600")
+            if(button.classList[0]== "runCode__run"){
+                iframe.src = array[i].sourcePhones
+            }
+            else{iframe.src=array[i].blackCanvasPhones}
+    }
+        else{
+            console.log("more than 600")
+            if(button.classList[0]== "runCode__run"){
+                iframe.src = array[i].source
+            }
+            else{iframe.src=array[i].blackCanvas}
+    }
+  }
+}
+return -1
+}
+//get Iframe element

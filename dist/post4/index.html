@@ -67,7 +67,7 @@
                             </pre>
                         </div>
                         <p>setup and draw are the two main functions of the program. In both we can write plain javascript, or use some other built-in features. setup controls static objects, draw controls the dynamic part. Once we wrote all the code in setup, this is kindof the base of our work.</p>
-                        <div class="runCode">
+<div class="runCode">
 <pre class="runCode__input">
 <code>
 function setup (){
@@ -78,23 +78,14 @@ background(51);
 function draw() { }
 </code>
 </pre>
-<div class="buttons">
+
+<iframe id="p5IFrame1" class="runCode__iframe" >
+
+</iframe>
+<div class="runCode__buttons">
 <button class="runCode__run">Run</button>
 <button class="runCode__stop">Stop</button>
-<button class="runCode__refresh">Refresh</button>
 </div>
-
-<pre class="runCode__output">
-<code>
-function setup (){
-createCanvas(300, 400);
-background(51); 
-}
-
-function draw() { }
-</code>
-</pre>
-
 </div>
 <p>If we know nothing of programming, the words are telling us: 
 </p>
@@ -131,14 +122,13 @@ rect(30, 30, 60, 40);
 function draw(){ }
 </code>
 </pre>
-<div class="buttons">
-<button class="runCode__run">Run</button>
-<button class="runCode__stop">Stop</button>
-<button class="runCode__refresh">Refresh</button>
-</div>
-<iframe id="exampleFrame" src="example.html" style="height: 400px;">
+<iframe id="p5IFrame2" style="height: 400px;">
 
 </iframe>
+<div class="runCode__buttons">
+<button class="runCode__run">Run</button>
+<button class="runCode__stop">Stop</button>
+</div>
 </div>
 <p>Many conclusions can be drawn out of this example. First, there are many ways to specify colors. For starters we can stick to one. The most general of those is rgba, so we'll mostly use that one. These are all properties taking color as an argument:
 </p>
@@ -202,15 +192,15 @@ grab examples!</p>
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 var disqus_config = function () {
-this.page.url = "https://misterybodon.github.io/web/dist/post3/index.html"  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "post3"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url = "https://misterybodon.github.io/web/dist/post4/index.html"  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "post4"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
 s.src = 'https://misterybodon.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
-(d.head %7C| d.body).appendChild(s);
+(d.head || d.body).appendChild(s);
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
@@ -235,8 +225,6 @@ s.setAttribute('data-timestamp', +new Date());
 </div>
 </footer>
 <script src="../js/all.js">
-</script>
-<script src="../js/p5.js">
 </script>
 <script src="../js/smoothScroll.js">
 </script>
