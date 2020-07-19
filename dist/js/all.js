@@ -48,8 +48,6 @@ window.onclick = e => {
    e.target.tagName == "BUTTON"
     && setSource(e.target, p5Frames)
     } 
-
-
 function setSource(button, array){
 let iframe = button.parentElement.previousElementSibling;
 for (let i=0; i<array.length; i++){
@@ -57,13 +55,17 @@ for (let i=0; i<array.length; i++){
     if(array[i].id == iframe.id){
         if(window.innerWidth<600){
             console.log("less than 600")
+                iframe.parentElement.classList +=" runCode__smallScreen";
+                iframe.classList +=" iframe__smallScreen";
             if(button.classList[0]== "runCode__run"){
                 iframe.src = array[i].sourcePhones
-            }
+                            }
             else{iframe.src=array[i].blackCanvasPhones}
     }
         else{
-            console.log("more than 600")
+            iframe.parentElement.classList +=" runCode__largeScreen";
+            iframe.classList +=" iframe__largeScreen";
+             console.log("more than 600")
             if(button.classList[0]== "runCode__run"){
                 iframe.src = array[i].source
             }

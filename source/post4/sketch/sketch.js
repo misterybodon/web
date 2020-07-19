@@ -2,7 +2,7 @@
 
 //VARIABLES
 //canvas dimensions
-let x=400, y=800;
+let x=600, y=600;
 let fontI, fontM
 let randomSize
 let myXval=x, myYval=y;//draw rendered in full canvas

@@ -24,8 +24,11 @@ position:relative;
 }
 
 .runCode{
+    overflow:hidden;
 display:flex;
 flex-direction:column;
+width:100%;
+transition:width 1s ease-in-out;
 > .runCode__buttons{
 @include variables.flexcenter($justify:space-around);
 background-color: variables.$hamburgerOff;
@@ -36,4 +39,23 @@ opacity:0.75;
 &:hover {opacity:0.5;}
 }
 }
+iframe {
+    width:100%;
+    height:auto;
+    transition:height 1s ease-in-out}
 }
+.runCode__largeScreen{
+    width:600px;
+    margin:auto;
+}
+.runCode__smallScreen{
+    width:350px;
+    margin:auto;
+}
+.iframe__largeScreen{
+    height:600px;
+}
+.iframe__smallScreen{
+    height:450px;
+}
+
