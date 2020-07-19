@@ -10,8 +10,7 @@ const imagemin = require('gulp-imagemin')
 const clean = require('gulp-clean')
 const rename = require('gulp-rename')
 const concat = require('gulp-concat')
-const filter = require('gulp-filter')
-//as python 'require' is equivalent to the code pasted in this file.
+//old js impoting syntax
 
 
 
