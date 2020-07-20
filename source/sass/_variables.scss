@@ -7,10 +7,7 @@
 
 //SPACING,
 //Main Grid
-$columnExtraSmallGapLeft:calc(1rem + 2vw);
-$columnExtraSmallGapRight:calc(0.5rem + 2vw);
-$columnExtraSmallGap:calc(0.7rem + 2vw);
-$columnSmallGap:calc(1rem + 2vw);
+$columnSmallGap:calc(0.5rem + 3vw);
 $columnMediumGap: calc(2.1rem + 2vw);
 $columnLargeGap:4rem;
 $rowSmallGap: 1rem;
@@ -32,8 +29,6 @@ $squareLogo: 1.8rem;
 $headersFontChange:0.2vw;
 $parFontChange:0.4vw;
 // COLORS
-$footerBackground2: #d5cccc;
-$footerBackground3: rgba(0,0,0,0.8);
 $footerBackground: rgba(66, 26, 26, 0.5);
 $lightGrey:rgba(0,0,0,.5);
 //body
