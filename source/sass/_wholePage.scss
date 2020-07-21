@@ -27,6 +27,11 @@
 }
 }
 
+@media screen and (min-width:900px){
+  .body{box-shadow:1px 1px 3px rgba(255, 255, 255, 0.5);
+  }
+}
+
 @media screen and (min-width:1000px) {
   .wholePage{
    max-width:1300px;
