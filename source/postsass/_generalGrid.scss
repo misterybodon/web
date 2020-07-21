@@ -3,7 +3,7 @@
 
 
 .body {
-  row-gap:variables.$noGap;
+  grid-row-gap:variables.$noGap;
   display: grid;
   grid-template-columns: repeat(2, variables.$columnSmallGap) 1fr repeat(2, variables.$columnSmallGap);
   grid-template-areas:
@@ -12,7 +12,7 @@
     "backToTop newposts newposts newposts ."
     "footer footer footer footer footer";
 }
-header {
+.header {
   grid-area: header;
 }
 .article {

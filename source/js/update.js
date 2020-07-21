@@ -1,5 +1,10 @@
 const posts = [
     {
+        title:"Mr. Nobody: The p5.js Library",
+        brief:"Mr. Nobody jumps right into Art!",
+        publishIn:"July 21th, 2020",
+        folder:"post4"
+    }, {
         title:"Mr. Nobody: The Concept of Temperature",
         brief:"Mr. Nobody takes the thermometer into apart to answer. What is Temperature?",
         publishIn:"July 6th, 2020",
