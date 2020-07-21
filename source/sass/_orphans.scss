@@ -1,8 +1,7 @@
 @use 'variables';
 @use 'resets';
-//specifically defined generally so we can 
-//teak with classes whenever we want a change.
 body {
+//tag decl. teak with classes whenever we want a change.
   text-align: left;
   background-color: black;
   color: white;
@@ -28,13 +27,10 @@ a {color:variables.$anchors;
 }
 
 @media screen and (min-width: 900px) {
-/* body { */
 .body {
 max-width: 900px;
 margin: auto;
 }
-
-
 }
 
 

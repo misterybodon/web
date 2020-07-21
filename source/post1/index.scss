@@ -10,6 +10,19 @@
 @use '../sass/header';
 @use '../sass/wholePage';
 @use '../postsass/generalGrid';
-@use '../postsass/postorphans';
 @use 'headerPost1';
 @use 'thisHeader';
+
+.webdev__h3 {
+    font-size: 1.324rem;
+      text-shadow: 1px 1px 7px #020202;
+        background: linear-gradient(to right, #1dff00, #40ea1d),black;
+          background-clip: text;
+            color: #0000;
+              text-align: right;
+            }
+            
+.h3__briefLine{
+  text-align:right;
+}
+
