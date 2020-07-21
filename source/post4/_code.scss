@@ -1,5 +1,13 @@
 @use '../sass/variables';
 @use 'thisvariables';
+h3 > .p5js{
+    color:thisvariables.$thepink;
+    opacity:0.7;
+}
+p .words{
+    background-color:grey;
+    font-size:1rem;
+}
 .watchCode, .runCode{
 color:thisvariables.$veryLightGray;
 background-color:rgba(0,0,0,0.9);
