@@ -12,7 +12,6 @@
 @use '../sass/wholePage';
 //for posts and other pages (not main)
 @use '../postsass/generalGrid';
-@use '../postsass/postorphans';
 //for a particular post (this one):
 @use 'whitman';
 @use 'thisHeader';
