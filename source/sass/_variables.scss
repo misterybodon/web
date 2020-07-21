@@ -7,9 +7,11 @@
 
 //SPACING,
 //Main Grid
-$columnSmallGap:calc(0.5rem + 3vw);
+$columnSmallGapLeft:calc(0.6rem + 4vw);
+$columnSmallGapRight:calc(4vw);
+$columnSmallGap:calc(0.8rem + 2vw);
 $columnMediumGap: calc(2.1rem + 2vw);
-$columnLargeGap:4rem;
+$columnLargeGap:calc(1.5rem + 5vw);
 $rowSmallGap: 1rem;
 $noGap:0em;
 //welcomePar, padding
