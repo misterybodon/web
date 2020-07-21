@@ -1,81 +1,43 @@
 @use 'resets';
 @use 'variables';
-
 .body {
-background-color:variables.$bodyBackground;
-row-gap:variables.$rowSmallGap;
-display: grid;
-grid-template-columns: repeat(2, variables.$columnSmallGap) 1fr repeat(2, variables.$columnSmallGap);
-grid-template-areas:
-"header header header header header"
-". welcome welcome welcome ."
-"backToTop article article article ."
-//"backToTop card card card ."
-"backToTop newposts  newposts newposts ."
+    background-color:variables.$bodyBackground;
+    grid-row-gap:variables.$rowSmallGap;
+    display: grid;
+    grid-template-columns: variables.$columnSmallGapLeft 1fr variables.$columnSmallGapRight;
+    grid-template-areas:
+    "header header header"
+    ". welcome . "
+    "backToTop article . "
+    "backToTop newposts  . "
 }
 header {
-  grid-area: header;
+    grid-area: header;
 }
 .welcome {
-  grid-area: welcome;
+    grid-area: welcome;
 }
 .article {
-  grid-area: article;
+    grid-area: article;
 }
-//.card { grid-area: card;}
 .newposts {
-  grid-area: newposts;
+    grid-area: newposts;
 }
 .footer {
-  grid-area: footer;
+    grid-area: footer;
 }
 .backToTop{
-  grid-area:backToTop;
+    grid-area:backToTop;
 }
 
-@media screen and (min-width:300px){
-
-.body {
-  //this gaps (left and right) and intentionally defined differently so we
-  //optimize space usage.
-grid-template-columns: repeat(2, variables.$columnExtraSmallGapLeft) 1fr repeat(2,
-variables.$columnExtraSmallGapRight);
-  grid-template-areas:
-    "header header header header header"
-    ". . welcome . ."
-    "backToTop article article article ."
-//    "backToTop backToTop card . ."
-    " backToTop newposts  newposts newposts ."
-}
-//footer is a grid too. Local layouts to be found on the respective files.
-}
-@media screen and (min-width:500px){
-.body{
-grid-template-columns: repeat(2, variables.$columnSmallGap) 1fr repeat(2,
-variables.$columnSmallGap);
-}
-}
 @media screen and (min-width:620px){
-.body{  grid-template-columns: repeat(2, variables.$columnMediumGap) 1fr repeat(2, variables.$columnMediumGap);
-
-  grid-template-areas:
-    "header header header header header"
-    ". welcome welcome welcome ."
-    "backToTop article article article ."
-//    "backToTop backToTop card . ."
-    " backToTop newposts  newposts newposts ."
-
-}
-}
-@media screen and (min-width:720px){
-.body{ 
-grid-template-columns: variables.$columnLargeGap 1fr variables.$columnLargeGap;
-  grid-template-areas:
-    "header header header"
-    ". welcome ."
-    "backToTop article ."
- //   "backToTop card . "
- "backToTop  newposts ."
-}
+    .body{ 
+        grid-template-columns: variables.$columnLargeGap 1fr variables.$columnLargeGap;
+        grid-template-areas:
+        "header header header"
+        ". welcome ."
+        "backToTop article ."
+        "backToTop  newposts ."
+    }
 }
 

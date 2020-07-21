@@ -1,16 +1,2 @@
-@use "variables";
 
-section.welcome > p {
-    margin:variables.$welcomeSmallMarginTB 0;
-    text-align:right;
-}
-@media screen and (min-width:400px){
-section.welcome > p {
-    margin:variables.$welcomeMarginTB 0;
-}
-}
-@media screen and (min-width:720px){
-    section.welcome > p {
-    margin:variables.$welcomeSmallMarginTB 0;
-    text-align:center;}
-}
+
