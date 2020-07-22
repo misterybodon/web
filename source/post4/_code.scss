@@ -1,17 +1,27 @@
 @use '../sass/variables';
 @use 'thisvariables';
-h3 > .p5js{
-    color:thisvariables.$thepink;
-    opacity:0.7;
+h2 > .p5js {
+  color: #d92d5f;
+  text-shadow: 1px 1px 1px white;
 }
-p .words{
-    background-color:grey;
-    font-size:1rem;
+
+h3 {
+text-decoration:underline;
+font-size:1.3rem;
+> .words {
+font-size:1.3rem;
+text-shadow:1px 1px 1px thisvariables.$lightBlue;
+}
+}
+.words{
+    font-family:inherit;
+    color:thisvariables.$lightBlue;
 }
 .watchCode, .runCode{
 color:thisvariables.$veryLightGray;
 background-color:rgba(0,0,0,0.9);
 box-shadow:1px 1px 2px variables.$hamburgerOff;
+margin: 1.5rem 0 0.8rem 0;
 > pre {
 &::before{
     content:"p5.js";
@@ -32,16 +42,17 @@ position:relative;
 }
 
 .runCode{
-    overflow:hidden;
+overflow:hidden;
 display:flex;
 flex-direction:column;
 width:100%;
 transition:width 1s ease-in-out;
-> .runCode__buttons{
+&__buttons{
 @include variables.flexcenter($justify:space-around);
 background-color: variables.$hamburgerOff;
 
-> button {padding:0.5rem;
+> button {
+padding:0.5rem;
 background-color:black;
 opacity:0.75;
 &:hover {opacity:0.5;}
@@ -68,6 +79,4 @@ iframe {
     background-color:black;
     transition:height 1s ease-in-out}
 
-.color > li {
-color:thisvariables.$lightBlue;
-}
+
