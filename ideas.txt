@@ -4,3 +4,7 @@ add a progress bar, basics:
 <progress class="navbar-reading_progress" data-role="navbar.reading_progress" max="100" value="23.233869973388817"></progress>
 
 value has to be updated with javascript.
+
+include an audio reading the file aloud, so users with visual impairments and anyone else can play the text instead of reading it.
+
+include RSS so people can get news
