@@ -109,7 +109,7 @@ function watchTask() {
         parallel(basicTask, minifyImgs)
     )}
 
-const basicTask = parallel(jsConcat, jsOnlyCopy, cpHtml, scssTask); 
+const basicTask = parallel(series(jsConcat, jsOnlyCopy), cpHtml, scssTask); 
 //parallel is a function defined in gulp like src, dest and series.
 
 //to run when running 'gulp' i.e the default task
