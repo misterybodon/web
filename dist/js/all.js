@@ -14,76 +14,84 @@ const lines = document.getElementById("hamburger").children;
 const h1 = document.getElementById("showcase__h1");
 const hamburger=document.getElementById("hamburger");
 const sketchBtn=document.querySelectorAll('.runCode__run, .runCode__stop')
-console.log('hello')
 const clickBurger = () => {
-    navBar.classList.toggle("trigger__navbar")
-    lines[0].classList.toggle("hamburger__line1")
-    lines[1].classList.toggle("hamburger__line2")
-    lines[2].classList.toggle("hamburger__line3")
-    h1.classList.toggle("h1Vanisher");
-    return //just tells the engine the process is over.
+  navBar.classList.toggle("trigger__navbar")
+  lines[0].classList.toggle("hamburger__line1")
+  lines[1].classList.toggle("hamburger__line2")
+  lines[2].classList.toggle("hamburger__line3")
+  h1.classList.toggle("h1Vanisher");
+  return //just tells the engine the process is over.
 }
-
 hamburger.onclick = clickBurger
 
 ////toggler for p5 iframes
 
 p5Frames = [
-                {
-                    id:"p5IFrame1", 
-                    source:"./sketch/p5IFrame1.html", 
-                    blackCanvas:"./sketch/black3.html",
-                    sourcePhones:"./sketch/phones/p5IFrame1.html",
-                    blackCanvasPhones:"./sketch/phones/black3.html"
-                }, 
-                {
-                    id:"p5IFrame2", 
-                    source:"./sketch/p5IFrame2.html", 
-                    blackCanvas:"./sketch/black3.html",
-                    sourcePhones:"./sketch/phones/p5IFrame2.html",
-                    blackCanvasPhones:"./sketch/phones/black3.html"
-                }, 
-                {
-                    id:"p5IFrame3", 
-                    source:"./sketch/p5IFrame3.html", 
-                    blackCanvas:"./sketch/black3.html",
-                    sourcePhones:"./sketch/phones/p5IFrame3.html",
-                    blackCanvasPhones:"./sketch/phones/black3.html"
-                } 
-          ]
+  {
+    id:"p5IFrame1", 
+    source:"./sketch/p5IFrame1.html", 
+    blackCanvas:"./sketch/black3.html",
+    sourcePhones:"./sketch/phones/p5IFrame1.html",
+    blackCanvasPhones:"./sketch/phones/black3.html"
+  }, 
+  {
+    id:"p5IFrame2", 
+    source:"./sketch/p5IFrame2.html", 
+    blackCanvas:"./sketch/black3.html",
+    sourcePhones:"./sketch/phones/p5IFrame2.html",
+    blackCanvasPhones:"./sketch/phones/black3.html"
+  }, 
+  {
+    id:"p5IFrame3", 
+    source:"./sketch/p5IFrame3.html", 
+    blackCanvas:"./sketch/black3.html",
+    sourcePhones:"./sketch/phones/p5IFrame3.html",
+    blackCanvasPhones:"./sketch/phones/black3.html"
+  } 
+]
 //
 //listens for a click on a button associated with a sketch.
 console.log(sketchBtn)
 sketchBtn.forEach(button => button.onclick = e => setSource(e.target, p5Frames))
 function setSource(button, array){
-let iframe = button.parentElement.nextElementSibling;
-for (let i=0; i<array.length; i++){
+  let iframe = button.parentElement.nextElementSibling;
+  for (let i=0; i<array.length; i++){
     console.log("executing setSource")
     if(array[i].id == iframe.id){
-        if(window.innerWidth<600){
-                iframe.parentElement.classList +=" runCode__smallScreen";
-                iframe.classList +=" iframe__smallScreen";
-            if(button.classList[0]== "runCode__run"){
-                iframe.src = array[i].sourcePhones
-                            }
-            else{iframe.src=array[i].blackCanvasPhones}
-    }
-        else{
-            iframe.parentElement.classList +=" runCode__largeScreen";
-            iframe.classList +=" iframe__largeScreen";
-            if(button.classList[0]== "runCode__run"){
-                iframe.src = array[i].source
-            }
-            else{iframe.src=array[i].blackCanvas}
+      if(window.innerWidth<600){
+        iframe.parentElement.classList +=" runCode__smallScreen";
+        iframe.classList +=" iframe__smallScreen";
+        if(button.classList[0]== "runCode__run"){
+          iframe.src = array[i].sourcePhones
+        }
+        else{iframe.src=array[i].blackCanvasPhones}
+      }
+      else{
+        iframe.parentElement.classList +=" runCode__largeScreen";
+        iframe.classList +=" iframe__largeScreen";
+        if(button.classList[0]== "runCode__run"){
+          iframe.src = array[i].source
+        }
+        else{iframe.src=array[i].blackCanvas}
+      }
     }
   }
-}
-return -1
+  return -1
 }
 //get Iframe element
 
 const posts = [
-    {
+   /* {
+        title:"Free and Open Source Software",
+        brief:"What is FOSS and why does it matter?",
+        publishIn:"August 28th, 2020",
+        folder:"post6"
+    }, {
+        title:"Transfer Data Between Devices",
+        brief:"How many ways can computers transfer data? What are the requirements?",
+        publishIn:"August 28th, 2020",
+        folder:"post5"
+    },*/ {
         title:"Mr. Nobody: The p5.js Library",
         brief:"Mr. Nobody jumps right into Art!",
         publishIn:"July 21th, 2020",
@@ -93,8 +101,7 @@ const posts = [
         brief:"Mr. Nobody takes the thermometer into apart to answer. What is Temperature?",
         publishIn:"July 6th, 2020",
         folder:"post3"
-    },
-    {
+    }, {
         title:"Mr. Nobody: Pink Floyd Cover", 
         brief:"Guitar cover of Wish You Were Here By Mister Nobody",
         publishIn:"May 24th, 2020", 
