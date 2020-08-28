@@ -1,5 +1,15 @@
 const posts = [
-    {
+   /* {
+        title:"Free and Open Source Software",
+        brief:"What is FOSS and why does it matter?",
+        publishIn:"August 28th, 2020",
+        folder:"post6"
+    }, {
+        title:"Transfer Data Between Devices",
+        brief:"How many ways can computers transfer data? What are the requirements?",
+        publishIn:"August 28th, 2020",
+        folder:"post5"
+    },*/ {
         title:"Mr. Nobody: The p5.js Library",
         brief:"Mr. Nobody jumps right into Art!",
         publishIn:"July 21th, 2020",
@@ -9,8 +19,7 @@ const posts = [
         brief:"Mr. Nobody takes the thermometer into apart to answer. What is Temperature?",
         publishIn:"July 6th, 2020",
         folder:"post3"
-    },
-    {
+    }, {
         title:"Mr. Nobody: Pink Floyd Cover", 
         brief:"Guitar cover of Wish You Were Here By Mister Nobody",
         publishIn:"May 24th, 2020", 
